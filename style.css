@@ -1,5 +1,8 @@
-.button-container {
+* {
     border: 1px black dotted;
+}
+
+.button-container {
     height: 200px;
     width: 900px;
     margin: auto;
@@ -12,10 +15,15 @@
     user-select: none; /* Standard */
 }
 
+.content-container {
+    width: 1100px;
+    margin: auto;
+    padding: 10px;
+}
+
 .col-1of9 {
     width: 10%;
     height: 100%;
-    border: 1px black dotted;
     flex-grow: 1;
     padding: 0 5px 0 3px;
     margin: 0 3px;
@@ -41,4 +49,27 @@
 
 .col-1of9-contents-1of3:nth-child(1) {
     line-height: 60px;
+}
+
+.city-headline {
+    margin-left: 100px;
+}
+
+.city-item-menu {
+    width: 97px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.city-item-menu p:hover {
+    background-color: gray;
+}
+
+.city-container {
+    display: flex;
 }
