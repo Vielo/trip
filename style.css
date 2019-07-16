@@ -1,5 +1,5 @@
 * {
-    border: 1px black dotted;
+    font-family: 'Lato', sans-serif;
 }
 
 .button-container {
@@ -26,14 +26,17 @@
     height: 100%;
     flex-grow: 1;
     padding: 0 5px 0 3px;
-    margin: 0 3px;
+    margin: 0 5px;
     background:#ccf2ff;
     transition:all 0.3s ease;
     z-index: 999;
+    box-shadow: 6px 6px #88888875
 }
 
 .col-active {
-    color: red;
+    background-color: #95cfe2;
+    margin-top: 5px;
+    box-shadow: 7px 7px #888888fa;
 }
 
 .col-1of9:hover {
@@ -52,8 +55,35 @@
 }
 
 .city-headline {
-    margin-left: 100px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
 }
+
+.city-headline div:nth-child(1) {
+    text-align: right;
+}
+
+.city-headline div:nth-child(odd) {
+    min-width: 300px;
+    display: inline;
+    font-size: 1.8em;
+}
+
+.city-headline div:nth-child(even) {
+    background-color: black;
+    width: 3px;
+    margin: 0px 25px;
+}
+
+/*
+.city-headline div:nth-child(1) {
+    padding-right: 20px;
+    margin-right: 17px;
+    border-right: 3px solid black;
+    text-align: right;
+}
+*/
 
 .city-item-menu {
     width: 97px;

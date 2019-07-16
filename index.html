@@ -6,6 +6,7 @@
         <script src='js/jquery.js'></script>
         <script src="js/main.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
     </head>
     <title>Digital Photo Book</title>
 
@@ -118,7 +119,9 @@
 
             <div id="denver1" class="city">
                 <div id="denver1-headline" class="city-headline">
-                    <h2>Denver</h2>
+                    <div>Denver</div>
+                    <div>&nbsp</div>
+                    <div>14.06.2019</div>
                 </div>
                 <div id="denver1-container" class="city-container">
                     <div id="denver1-item-menu" class="city-item-menu">
@@ -145,7 +148,9 @@
             </div>
             <div id="idaho_springs" class="city" style='display:none'>
                 <div id="idaho_springs-headline" class="city-headline">
-                    <h2>Idaho Springs</h2>
+                    <div>Idaho Springs</div>
+                    <div>&nbsp</div>
+                    <div>15.06.2019</div>
                 </div>
                 <div id="idaho_springs-container" class="city-container">
                     <div id="idaho_springs-item-menu" class="city-item-menu">
@@ -172,7 +177,9 @@
             </div>
             <div id="wellington" class="city" style='display:none'>
                 <div id="wellington-headline" class="city-headline">
-                    <h2>Wellington</h2>
+                    <div>Wellington</div>
+                    <div>&nbsp</div>
+                    <div>16.06.2019</div>
                 </div>
                 <div id="wellington-container" class="city-container">
                     <div id="wellington-item-menu" class="city-item-menu">
@@ -183,7 +190,7 @@
                     <div id="city-item-container-wellington" class="city-items-container">
                         <div id="wellington-item1" class="city-item">
                             <p>Item 1</p>
-                            <p>15.06.2019</p>
+                            <p>16.06.2019</p>
                         </div>
                         <div id="wellington-item2" class="city-item" style='display:none'>
                             <p>Item 2</p>
@@ -198,42 +205,180 @@
                 
             </div>
             
-            <div id="wellington" class="city" style="display:none">
-                <h2>Wellington</h2>
-                <p>Day 3 stuff.</p>
-                <p>Georgetown, przejazd autostradą i70 z super widokami (zwłaszcza przy odbiciu na Loveland Pass), Grat Junction, Colorado National Monument</p>
-                <P>16.06.2019</P>
+            <div id="kanab" class="city" style='display:none'>
+                <div id="kanab-headline" class="city-headline">
+                    <div>Kanab</div>
+                    <div>&nbsp</div>
+                    <div>17-18.06.2019</div>
+                </div>
+                <div id="kanab-container" class="city-container">
+                    <div id="kanab-item-menu" class="city-item-menu">
+                        <p class="city-item-menu-option" onclick="openMenuItem('kanab-item1')">Item 1</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('kanab-item2')">Item 2</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('kanab-item3')">Item 3</p>
+                    </div>
+                    <div id="city-item-container-kanab" class="city-items-container">
+                        <div id="kanab-item1" class="city-item">
+                            <p>Item 1</p>
+                            <p>17-18.06.2019</p>
+                        </div>
+                        <div id="kanab-item2" class="city-item" style='display:none'>
+                            <p>Item 2</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                        <div id="kanab-item3" class="city-item" style='display:none'>
+                            <p>Item 3</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="kanab" class="city" style="display:none">
-                <h2>Kanab</h2>
-                <p>Day 4 and 5 stuff.</p>
-                <p>Śniadanie w Outlaw Cafe, park Red Canoyon, Bryce National Park, przyjazd do Kanab</p>
-                <p>17.06.2019</p>
-                <p>Grand Canyon (North Rim), Pink Coral Sand Dunes State Park</p>
-                <p>18.06.2019</p>
+
+            <div id="provo" class="city" style='display:none'>
+                <div id="provo-headline" class="city-headline">
+                    <div>Provo</div>
+                    <div>&nbsp</div>
+                    <div>19.06.2019</div>
+                </div>
+                <div id="provo-container" class="city-container">
+                    <div id="provo-item-menu" class="city-item-menu">
+                        <p class="city-item-menu-option" onclick="openMenuItem('provo-item1')">Item 1</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('provo-item2')">Item 2</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('provo-item3')">Item 3</p>
+                    </div>
+                    <div id="city-item-container-provo" class="city-items-container">
+                        <div id="provo-item1" class="city-item">
+                            <p>Item 1</p>
+                            <p>19.06.2019</p>
+                        </div>
+                        <div id="provo-item2" class="city-item" style='display:none'>
+                            <p>Item 2</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                        <div id="provo-item3" class="city-item" style='display:none'>
+                            <p>Item 3</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div id="provo" class="city" style="display:none">
-                <h2>Provo</h2>
-                <p>Day 6 stuff.</p>
+
+            <div id="pinedale" class="city" style='display:none'>
+                <div id="pinedale-headline" class="city-headline">
+                    <div>Pinedale</div>
+                    <div>&nbsp</div>
+                    <div>20.06.2019</div>
+                </div>
+                <div id="pinedale-container" class="city-container">
+                    <div id="pinedale-item-menu" class="city-item-menu">
+                        <p class="city-item-menu-option" onclick="openMenuItem('pinedale-item1')">Item 1</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('pinedale-item2')">Item 2</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('pinedale-item3')">Item 3</p>
+                    </div>
+                    <div id="city-item-container-pinedale" class="city-items-container">
+                        <div id="pinedale-item1" class="city-item">
+                            <p>Item 1</p>
+                            <p>20.06.2019</p>
+                        </div>
+                        <div id="pinedale-item2" class="city-item" style='display:none'>
+                            <p>Item 2</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                        <div id="pinedale-item3" class="city-item" style='display:none'>
+                            <p>Item 3</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div id="pinedale" class="city" style="display:none">
-                <h2>Pinedale</h2>
-                <p>Day 7 stuff.</p>
+
+            <div id="cody" class="city" style='display:none'>
+                <div id="cody-headline" class="city-headline">
+                    <div>Cody</div>
+                    <div>&nbsp</div>
+                    <div>21-23.06.2019</div>
+                </div>
+                <div id="cody-container" class="city-container">
+                    <div id="cody-item-menu" class="city-item-menu">
+                        <p class="city-item-menu-option" onclick="openMenuItem('cody-item1')">Item 1</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('cody-item2')">Item 2</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('cody-item3')">Item 3</p>
+                    </div>
+                    <div id="city-item-container-pinedale" class="city-items-container">
+                        <div id="cody-item1" class="city-item">
+                            <p>Item 1</p>
+                            <p>21-23.06.2019</p>
+                        </div>
+                        <div id="cody-item2" class="city-item" style='display:none'>
+                            <p>Item 2</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                        <div id="cody-item3" class="city-item" style='display:none'>
+                            <p>Item 3</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="cody" class="city" style="display:none">
-                <h2>Cody</h2>
-                <p>Day 8-10 stuff.</p>
+
+            <div id="rock_springs" class="city" style='display:none'>
+                <div id="rock_springs-headline" class="city-headline">
+                    <div>Rock Springs</div>
+                    <div>&nbsp</div>
+                    <div>24.06.2019</div>
+                </div>
+                <div id="rock_springs-container" class="city-container">
+                    <div id="rock_springs-item-menu" class="city-item-menu">
+                        <p class="city-item-menu-option" onclick="openMenuItem('rock_springs-item1')">Item 1</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('rock_springs-item2')">Item 2</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('rock_springs-item3')">Item 3</p>
+                    </div>
+                    <div id="city-item-container-pinedale" class="city-items-container">
+                        <div id="rock_springs-item1" class="city-item">
+                            <p>Item 1</p>
+                            <p>24.06.2019</p>
+                        </div>
+                        <div id="rock_springs-item2" class="city-item" style='display:none'>
+                            <p>Item 2</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                        <div id="rock_springs-item3" class="city-item" style='display:none'>
+                            <p>Item 3</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="rock_springs" class="city" style="display:none">
-                <h2>Rock Springs</h2>
-                <p>Day 11 stuff.</p>
+
+            <div id="denver2" class="city" style='display:none'>
+                <div id="denver2-headline" class="city-headline">
+                    <div>Denver</div>
+                    <div>&nbsp</div>
+                    <div>25.06.2019</div>
+                </div>
+                <div id="denver2-container" class="city-container">
+                    <div id="denver2-item-menu" class="city-item-menu">
+                        <p class="city-item-menu-option" onclick="openMenuItem('denver2-item1')">Item 1</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('denver2-item2')">Item 2</p>
+                        <p class="city-item-menu-option" onclick="openMenuItem('denver2-item3')">Item 3</p>
+                    </div>
+                    <div id="city-item-container-pinedale" class="city-items-container">
+                        <div id="denver2-item1" class="city-item">
+                            <p>Item 1</p>
+                            <p>25.06.2019</p>
+                        </div>
+                        <div id="denver2-item2" class="city-item" style='display:none'>
+                            <p>Item 2</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                        <div id="denver2-item3" class="city-item" style='display:none'>
+                            <p>Item 3</p>
+                            <p>Should not be visible until menu item 2 is clicked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="denver2" class="city" style="display:none">
-                <h2>Denver</h2>
-                <p>Day 12 (return trip) stuff.</p>
-            </div>
+
         </div>
     </body>
 

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $(".col-1of9").click(function() {
-    this.toggleClass('col-active');
+    $(".col-1of9").removeClass("col-active");
+    $(this).toggleClass('col-active');
   });
   console.log('ready!');
 });
