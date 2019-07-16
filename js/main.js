@@ -5,6 +5,7 @@ $(document).ready(function() {
   console.log('ready!');
 });
 
+
 function openCity(cityName) {
   var i;
   var x = document.getElementsByClassName("city");
