@@ -3,18 +3,14 @@ $(document).ready(function() {
   $(".col-1of9").click(function() {
     $(".col-1of9").removeClass("col-active");
     $(this).toggleClass('col-active');
+    $(".city-item-menu-option").removeClass("city-item-menu-option-active");
+    $(".city-item-menu-option:nth-child(1)").toggleClass("city-item-menu-option-active");
   });
   $(".city-item-menu-option:first").addClass("city-item-menu-option-active");
   $(".city-item-menu-option").click(function() {
     $(".city-item-menu-option").removeClass("city-item-menu-option-active");
     $(this).toggleClass("city-item-menu-option-active");
   });
-  (function() { 
-    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-    Galleria.run('.galleria', {
-      dataSource: imageData,
-    });
-  }());
   console.log('ready!');
 });
 

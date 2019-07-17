@@ -117,12 +117,6 @@
     display: flex;
 }
 
-.galleria {
-    max-width: 700px;
-    height: 400px;
-    background: white;
-}
-
 .city-items-container {
     width: 100%;
 }
