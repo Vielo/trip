@@ -5,8 +5,10 @@
         <meta charset="utf-8">
         <script src='js/jquery.js'></script>
         <script src="js/main.js"></script>
+        <script src="js/image-data.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+        <script src="galleria/galleria-1.5.7.min.js"></script>
     </head>
     <title>Digital Photo Book</title>
 
@@ -138,11 +140,11 @@
                     <div id="city-item-container-denver1" class="city-items-container">
                         <div id="denver1-item1" class="city-item">
                             <p>Arrival to USA stuff.</p>
-                            <p>14.06.2019</p>
+                            <div class="galleria">
+                            </div>
                         </div>
                         <div id="denver1-item2" class="city-item" style='display:none'>
                             <p>First impressions.</p>
-                            <p>Should not be visible until menu item 2 is clicked</p>
                         </div>
                         <div id="denver1-item3" class="city-item" style='display:none'>
                             <p>Hotel stuff.</p>
@@ -160,9 +162,15 @@
                 </div>
                 <div id="idaho_springs-container" class="city-container">
                     <div id="idaho_springs-item-menu" class="city-item-menu">
-                        <p class="city-item-menu-option" onclick="openMenuItem('idaho_springs-item1')">Item 1</p>
-                        <p class="city-item-menu-option" onclick="openMenuItem('idaho_springs-item2')">Item 2</p>
-                        <p class="city-item-menu-option" onclick="openMenuItem('idaho_springs-item3')">Item 3</p>
+                        <div class="city-item-menu-option" onclick="openMenuItem('idaho_springs-item1')">
+                            <div>Car rental agency</div>
+                        </div>
+                        <div class="city-item-menu-option" onclick="openMenuItem('idaho_springs-item2')">
+                            <div>Rocky Mountains</div>
+                        </div>
+                        <div class="city-item-menu-option" onclick="openMenuItem('idaho_springs-item3')">
+                            <div>Grand Lake</div>
+                        </div>
                     </div>
                     <div id="city-item-container-idaho_springs" class="city-items-container">
                         <div id="idaho_springs-item1" class="city-item">
@@ -189,14 +197,74 @@
                 </div>
                 <div id="wellington-container" class="city-container">
                     <div id="wellington-item-menu" class="city-item-menu">
-                        <p class="city-item-menu-option" onclick="openMenuItem('wellington-item1')">wellington Item 1</p>
-                        <p class="city-item-menu-option" onclick="openMenuItem('wellington-item2')">wellington Item 2</p>
-                        <p class="city-item-menu-option" onclick="openMenuItem('wellington-item3')">wellington Item 3</p>
+                        <div class="city-item-menu-option" onclick="openMenuItem('wellington-item1')">
+                            <div>Georgetown</div>
+                        </div>
+                        <div class="city-item-menu-option" onclick="openMenuItem('wellington-item2')">
+                            <div>Colorado National Monument</div>
+                        </div>
+                        <div class="city-item-menu-option" onclick="openMenuItem('wellington-item3')">
+                            <div>Wellington</div>
+                        </div>
                     </div>
                     <div id="city-item-container-wellington" class="city-items-container">
                         <div id="wellington-item1" class="city-item">
-                            <p>Item 1</p>
-                            <p>16.06.2019</p>
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 6</div>
+                                    <img src="img\idaho_springs\idaho_springs_1_max.jpg" style="width:100%">
+                                </div>
+                                    
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 6</div>
+                                    <img src="img\idaho_springs\idaho_springs_2_max.jpg" style="width:100%">
+                                </div>
+                                    
+                                <div class="mySlides fade">
+                                    <div class="numbertext">3 / 6</div>
+                                    <img src="img\idaho_springs\idaho_springs_3_max.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">4 / 6</div>
+                                    <img src="img\idaho_springs\idaho_springs_4_max.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">5 / 6</div>
+                                    <img src="img\idaho_springs\idaho_springs_5_max.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">6 / 6</div>
+                                    <img src="img\idaho_springs\idaho_springs_6_max.jpg" style="width:100%">
+                                </div>
+                                    
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                <div class="caption-container">
+                                    <p id="caption"></p>
+                                </div>
+                            
+                                <div class="row">
+                                    <div class="column">
+                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_1_thumb.jpg" style="width:100%" onclick="currentSlide(1)" alt="Georgetown">
+                                    </div>
+                                    <div class="column">
+                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_2_thumb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Georgetown">
+                                    </div>
+                                    <div class="column">
+                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_3_thumb.jpg" style="width:100%" onclick="currentSlide(3)" alt="Georgetown">
+                                    </div>
+                                    <div class="column">
+                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_4_thumb.jpg" style="width:100%" onclick="currentSlide(4)" alt="Georgetown">
+                                    </div>
+                                    <div class="column">
+                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_5_thumb.jpg" style="width:100%" onclick="currentSlide(5)" alt="Georgetown">
+                                    </div>    
+                                    <div class="column">
+                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_6_thumb.jpg" style="width:100%" onclick="currentSlide(6)" alt="Georgetown">
+                                    </div>
+                                </div>    
+                            </div>
+  
                         </div>
                         <div id="wellington-item2" class="city-item" style='display:none'>
                             <p>Item 2</p>
@@ -386,6 +454,37 @@
             </div>
 
         </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
     </body>
 
 </html>

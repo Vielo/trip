@@ -9,6 +9,12 @@ $(document).ready(function() {
     $(".city-item-menu-option").removeClass("city-item-menu-option-active");
     $(this).toggleClass("city-item-menu-option-active");
   });
+  (function() { 
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria', {
+      dataSource: imageData,
+    });
+  }());
   console.log('ready!');
 });
 
@@ -32,3 +38,30 @@ function openMenuItem(cityItem) {
   document.getElementById(cityItem).style.display = "block";
 };
 
+/* The below controls how the gallery behaves */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
