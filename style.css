@@ -86,7 +86,7 @@
 */
 
 .city-item-menu {
-    width: 97px;
+    width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -94,10 +94,23 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    margin-right: 40px;
 }
 
-.city-item-menu p:hover {
+.city-item-menu-option {
+    width: 90px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.city-item-menu-option:hover {
     background-color: gray;
+}
+
+.city-item-menu-option-active {
+    font-weight: bold;
 }
 
 .city-container {
