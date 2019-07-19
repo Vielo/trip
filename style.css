@@ -183,16 +183,19 @@ img {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+ 
+.gallery-container {
+  display: flex;
+  justify-content: flex-start;
+}
 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
-    float: left;
+.thumbnail-column {
+  width: 120px;
+  margin-left: 10px;
+}
+
+  /* thumbnails as flex items in a column displayed to the right of image gallery */
+  .thumbnail {
     width: 16.66%;
   }
   
