@@ -177,13 +177,21 @@ img {
     background-color: #222;
     padding: 2px 5px;
     color: white;
+    display: flex;
   }
   
 .caption-container p {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 0.8em;
 }
  
+.caption-small {
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+}
+
 .gallery-container {
   display: flex;
   justify-content: flex-start;

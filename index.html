@@ -120,29 +120,30 @@
                                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                                 <div class="caption-container">
-                                    <p id="caption"></p>
+                                    <p id="caption-headline"></p>
+                                    <p id="caption-body" class="caption-small"></p>
                                 </div>
                             </div>
                             <div class="thumbnail-column">
-                                    <div class="column">
-                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_1_max.jpg" style="width:100%" onclick="currentSlide(1)" alt="Georgetown">
-                                    </div>
-                                    <div class="column">
-                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_2_max.jpg" style="width:100%" onclick="currentSlide(2)" alt="Georgetown">
-                                    </div>
-                                    <div class="column">
-                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_3_max.jpg" style="width:100%" onclick="currentSlide(3)" alt="Georgetown">
-                                    </div>
-                                    <div class="column">
-                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_4_max.jpg" style="width:100%" onclick="currentSlide(4)" alt="Georgetown">
-                                    </div>
-                                    <div class="column">
-                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_5_max.jpg" style="width:100%" onclick="currentSlide(5)" alt="Georgetown">
-                                    </div>    
-                                    <div class="column">
-                                        <img class="demo cursor" src="img\idaho_springs\idaho_springs_6_max.jpg" style="width:100%" onclick="currentSlide(6)" alt="Georgetown">
-                                    </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="img\idaho_springs\idaho_springs_1_max.jpg" style="width:100%" onclick="currentSlide(1)" alt="Georgetown">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="img\idaho_springs\idaho_springs_2_max.jpg" style="width:100%" onclick="currentSlide(2)" alt="Georgetown">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="img\idaho_springs\idaho_springs_3_max.jpg" style="width:100%" onclick="currentSlide(3)" alt="Georgetown">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="img\idaho_springs\idaho_springs_4_max.jpg" style="width:100%" onclick="currentSlide(4)" alt="Georgetown">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="img\idaho_springs\idaho_springs_5_max.jpg" style="width:100%" onclick="currentSlide(5)" alt="Georgetown">
                                 </div>    
+                                <div class="column">
+                                    <img class="demo cursor" src="img\idaho_springs\idaho_springs_6_max.jpg" style="width:100%" onclick="currentSlide(6)" alt="Georgetown">
+                                </div>
+                            </div>    
 
                         </div>
                         <div id="wellington-item2" class="city-item" style='display:none'>
@@ -175,11 +176,12 @@
             showSlides(slideIndex = n);
             }
 
-            function showSlides(n) {
+            function showSlides(n) {        /* need to make this accept another argument to determine city name!!!! */
             var i;
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
+            var captionHeadline = document.getElementById("caption-headline");
+            var captionBody = document.getElementById("caption-body");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
@@ -190,7 +192,10 @@
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
+            tempSlide = `img${slideIndex}`;
+            console.log('slide index: ' + slideIndex);
+            captionHeadline.innerHTML = pageContents.wellington.cityItems[0].images[tempSlide][0];
+            captionBody.innerHTML = pageContents.wellington.cityItems[0].images[tempSlide][1];
             }
         </script>
     </body>

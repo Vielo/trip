@@ -4,18 +4,20 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ denv flight",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
+                    img1: ["item1_ Caption Headline 1", "item1_ Caption Body 1"],
+                    img2: ["item1_ Caption Headline 2", "item1_ Caption Body 2"],
+                    img3: ["item1_ Caption Headline 3", "item1_ Caption Body 3"],
+                    img4: ["item1_ Caption Headline 4", "item1_ Caption Body 4"],
+                    img5: ["item1_ Caption Headline 5", "item1_ Caption Body 5"],
+                    img6: ["item1_ Caption Headline 6", "item1_ Caption Body 6"]
                 }
             },
             {
                 cityItemMenuOption: "dyn_ denv first impressions",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -28,6 +30,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ denv hotel",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -38,6 +41,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ idaho option1",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -50,6 +54,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ idaho option2",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -62,6 +67,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ idaho option3",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -72,18 +78,20 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "Georgetown",
+                cityItemCodename: "georgetown",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
+                    img1: ["item1_ Caption Headline 1", "item1_ Caption Body 1"],
+                    img2: ["item1_ Caption Headline 2", "item1_ Caption Body 2"],
+                    img3: ["item1_ Caption Headline 3", "item1_ Caption Body 3"],
+                    img4: ["item1_ Caption Headline 4", "item1_ Caption Body 4"],
+                    img5: ["item1_ Caption Headline 5", "item1_ Caption Body 5"],
+                    img6: ["item1_ Caption Headline 6", "item1_ Caption Body 6"]
                 }
             },
             {
                 cityItemMenuOption: "Colorado National Monument",
+                cityItemCodename: "colorado_national_monument",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -96,6 +104,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "Wellington",
+                cityItemCodename: "wellington",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -106,6 +115,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ kanab option1",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -118,6 +128,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ kanab option2",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -140,6 +151,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ provo option1",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -152,6 +164,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ provo option2",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -164,6 +177,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ provo option3",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -174,6 +188,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ pin option1",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -186,6 +201,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ pin option2",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -198,6 +214,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ pin option3",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -208,6 +225,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ cody option1",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -220,6 +238,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ cody option2",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -232,6 +251,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ cody option3",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -242,6 +262,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ rs option1",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -254,6 +275,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ rs option2",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -266,6 +288,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ rs option3",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }
@@ -276,6 +299,7 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "dyn_ den2 option1",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
@@ -288,6 +312,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ den2 option2",
+                cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
@@ -300,6 +325,7 @@ var pageContents = {
             },
             {
                 cityItemMenuOption: "dyn_ den2 option3",
+                cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             }

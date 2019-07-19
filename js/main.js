@@ -23,14 +23,7 @@ function openCity(cityName) {
 
 };
 
-function openMenuItem(cityItem) {
-  var i;
-  var x = document.getElementsByClassName("city-item");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  };
-  document.getElementById(cityItem).style.display = "flex";
-};
+
 
 /* controls the dynamic generation of the page content */
 
@@ -42,18 +35,41 @@ function loadNewCity(cityName) {
   $('#item-menu').empty();
   for (i = 0; i < pageContents[tempCityName].cityItems.length; i++) {
     console.log('loop interation started');
-    $('#item-menu').append(`<div class="city-item-menu-option" onclick="openMenuItem('${cityName}-item${i+1}')"><div>${pageContents[cityName].cityItems[i].cityItemMenuOption}</div></div>`);
+    $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${tempCityName}',${i})"><div>${pageContents[cityName].cityItems[i].cityItemMenuOption}</div></div>`);
     console.log('loop iteration complete')
   };
-  loadNewCityItem(cityName);
+  loadNewCityItem(tempCityName, 0);
 
 }
 
-function loadNewCityItem(cityItem) {
-
-
+function loadNewCityItem(cityName, itemNo) {    /* need to make it take in arguments to determine which city item is to be opened! */
+  $('.city-items-container').empty();
+  console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
+  if (pageContents[cityName].cityItems[itemNo].showGallery) {
+    $('.city-items-container').append(`<div class="city-item gallery-container"><div class="slideshow-container"></div></div>`);
+    var tempLength = Object.keys(pageContents[cityName].cityItems[itemNo].images)
+    console.log('number of images: ' + tempLength.length);
+    for (i = 0; i < tempLength.length; i++) {
+      $('.slideshow-container').append(`<div class="mySlides fade">
+      <div class="numbertext">${i+1} / ${tempLength.length}</div>
+      <img src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%"></div>`);
+      
+    }
+    $('.slideshow-container').append(`<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="caption-container">
+        <p id="caption-headline"></p>
+        <p id="caption-body" class="caption-small"></p>
+    </div>`);
+    $('.city-item.gallery-container').append(`<div class="thumbnail-column"></div>`);
+    for (i = 0; i < tempLength.length; i++) {
+      $('.thumbnail-column').append(`<div class="column">
+      <img class="demo cursor" src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%" onclick="currentSlide(${i+1})" alt="${pageContents[cityName].cityItems[itemNo].cityItemMenuOption}"></div>`)
+    }  
+  }
+  
+  showSlides(1);
 }
-
 
 
 /* The below controls how the gallery behaves */
