@@ -118,12 +118,12 @@ var pageContents = {
                 cityItemCodename: "",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
+                    img1: ["kanab_ item1_Caption 1", "kanab item1 caption body"],
+                    img2: ["kanab_ item1_Caption 2", "kanab item2 caption body"],
+                    img3: ["kanab_ item1_Caption 3", "kanab item3 caption body"],
+                    img4: ["kanab_ item1_Caption 4", "kanab item4 caption body"],
+                    img5: ["kanab_ item1_Caption 5", "kanab item5 caption body"],
+                    img6: ["kanab_ item1_Caption 6", "kanab item6 caption body"],
                 }
             },
             {
