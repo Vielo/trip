@@ -45,7 +45,7 @@ function loadNewCity(cityName) {
 function loadNewCityItem(cityName, itemNo) {    /* need to make it take in arguments to determine which city item is to be opened! */
   $('.city-items-container').empty();
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
-  if (pageContents[cityName].cityItems[itemNo].showGallery) {
+  if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
     $('.city-items-container').append(`<div class="city-item gallery-container"><div class="slideshow-container"></div></div>`);
     var tempLength = Object.keys(pageContents[cityName].cityItems[itemNo].images)
     console.log('number of images: ' + tempLength.length);
@@ -55,8 +55,8 @@ function loadNewCityItem(cityName, itemNo) {    /* need to make it take in argum
       <img src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%"></div>`);
       
     }
-    $('.slideshow-container').append(`<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    $('.slideshow-container').append(`<a class="prev" onclick="plusSlides(-1,'${cityName}',${itemNo})">&#10094;</a>
+    <a class="next" onclick="plusSlides(1,'${cityName}',${itemNo})">&#10095;</a>
     <div class="caption-container">
         <p id="caption-headline"></p>
         <p id="caption-body" class="caption-small"></p>
@@ -64,11 +64,19 @@ function loadNewCityItem(cityName, itemNo) {    /* need to make it take in argum
     $('.city-item.gallery-container').append(`<div class="thumbnail-column"></div>`);
     for (i = 0; i < tempLength.length; i++) {
       $('.thumbnail-column').append(`<div class="column">
-      <img class="demo cursor" src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%" onclick="currentSlide(${i+1})" alt="${pageContents[cityName].cityItems[itemNo].cityItemMenuOption}"></div>`)
-    }  
+      <img class="demo cursor" src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%" onclick="currentSlide(${i+1},'${cityName}',${itemNo})" alt="${pageContents[cityName].cityItems[itemNo].cityItemMenuOption}"></div>`)
+    } 
+    slideIndex = 1;
+    console.log("slide index reset, current value: " + slideIndex)
+    console.log("page content cityName is now: " + cityName);
+    showSlides(1, cityName, itemNo); 
+    currentCity = cityName;
+    console.log("currentCity is now: " + currentCity);
+    currentCityItem = itemNo;
+    console.log("currentCityItem is now: " + pageContents[cityName].cityItems[itemNo].cityItemMenuOption + "(" + currentCityItem + ")");
   }
   
-  showSlides(1);
+  
 }
 
 

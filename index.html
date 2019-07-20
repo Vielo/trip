@@ -165,18 +165,20 @@
             
             
         <script>
+            var currentCity;
+            var currentCityItem;
             var slideIndex = 1;
-            showSlides(slideIndex);
+            showSlides(slideIndex, currentCity, currentCityItem);
 
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
+            function plusSlides(n, currentCity, currentCityItem) {
+            showSlides(slideIndex += n, currentCity, currentCityItem);
             }
 
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
+            function currentSlide(n, currentCity, currentCityItem) {
+                showSlides(slideIndex = n, currentCity, currentCityItem);
             }
 
-            function showSlides(n) {        /* need to make this accept another argument to determine city name!!!! */
+            function showSlides(n, o, p) {        /* n is current slide, o is used to determine site-content info for loading the captions, p is ued to determine specific city item */
             var i;
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("demo");
@@ -194,8 +196,8 @@
             dots[slideIndex-1].className += " active";
             tempSlide = `img${slideIndex}`;
             console.log('slide index: ' + slideIndex);
-            captionHeadline.innerHTML = pageContents.wellington.cityItems[0].images[tempSlide][0];
-            captionBody.innerHTML = pageContents.wellington.cityItems[0].images[tempSlide][1];
+            captionHeadline.innerHTML = pageContents[o].cityItems[p].images[tempSlide][0];
+            captionBody.innerHTML = pageContents[o].cityItems[p].images[tempSlide][1];
             }
         </script>
     </body>
