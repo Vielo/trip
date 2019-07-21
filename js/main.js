@@ -1,5 +1,7 @@
 $(document).ready(function() {
   $(".col-1of9:first").addClass("col-active");
+  loadNewCity("denver1");
+  loadNewCityItem("denver1", 0);
   $(".col-1of9").click(function() {
     $(".col-1of9").removeClass("col-active");
     $(this).toggleClass('col-active');
@@ -31,18 +33,18 @@ function loadNewCity(cityName) {
   let tempCityName = cityName;
   $('#city-headline-name').html(pageContents[tempCityName].headlineData[0]);
   $('#city-headline-date').html(pageContents[tempCityName].headlineData[1]);
-  console.log(pageContents[tempCityName].cityItems.length);
+  console.log("city items amount: " + pageContents[tempCityName].cityItems.length);
   $('#item-menu').empty();
   for (i = 0; i < pageContents[tempCityName].cityItems.length; i++) {
-    console.log('loop interation started');
+    console.log('city items (' + i + ') loop interation started');
     $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${tempCityName}',${i})"><div>${pageContents[cityName].cityItems[i].cityItemMenuOption}</div></div>`);
-    console.log('loop iteration complete')
+    console.log('city items (' + i + ') loop iteration complete')
   };
   loadNewCityItem(tempCityName, 0);
 
 }
 
-function loadNewCityItem(cityName, itemNo) {    /* need to make it take in arguments to determine which city item is to be opened! */
+function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
   $('.city-items-container').empty();
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
   if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
@@ -75,6 +77,9 @@ function loadNewCityItem(cityName, itemNo) {    /* need to make it take in argum
     currentCityItem = itemNo;
     console.log("currentCityItem is now: " + pageContents[cityName].cityItems[itemNo].cityItemMenuOption + "(" + currentCityItem + ")");
   }
+  else {    /* TODO: dynamic generation of non-gallery city items */
+
+  }
   
   
 }
@@ -82,28 +87,38 @@ function loadNewCityItem(cityName, itemNo) {    /* need to make it take in argum
 
 /* The below controls how the gallery behaves */
 var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+var currentCity;
+var currentCityItem;
+var slideIndex = 1;
+
+
+function plusSlides(n, currentCity, currentCityItem) {
+showSlides(slideIndex += n, currentCity, currentCityItem);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, currentCity, currentCityItem) {
+    showSlides(slideIndex = n, currentCity, currentCityItem);
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+function showSlides(n, o, p) {        /* n is current slide, o is used to determine site-content info for loading the captions, p is ued to determine specific city item */
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionHeadline = document.getElementById("caption-headline");
+var captionBody = document.getElementById("caption-body");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+tempSlide = `img${slideIndex}`;
+console.log('slide index: ' + slideIndex);
+captionHeadline.innerHTML = pageContents[o].cityItems[p].images[tempSlide][0];
+captionBody.innerHTML = pageContents[o].cityItems[p].images[tempSlide][1];
 }
