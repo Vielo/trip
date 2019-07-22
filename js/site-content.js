@@ -6,27 +6,13 @@ var pageContents = {
                 cityItemMenuOption: "dyn_ denv flight",
                 cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: ["item1_ Caption Headline 1", "item1_ Caption Body 1"],
-                    img2: ["item1_ Caption Headline 2", "item1_ Caption Body 2"],
-                    img3: ["item1_ Caption Headline 3", "item1_ Caption Body 3"],
-                    img4: ["item1_ Caption Headline 4", "item1_ Caption Body 4"],
-                    img5: ["item1_ Caption Headline 5", "item1_ Caption Body 5"],
-                    img6: ["item1_ Caption Headline 6", "item1_ Caption Body 6"]
-                }
+                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             },
             {
                 cityItemMenuOption: "dyn_ denv first impressions",
                 cityItemCodename: "",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
-                }
+                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             },
             {
                 cityItemMenuOption: "dyn_ denv hotel",

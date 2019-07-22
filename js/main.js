@@ -78,7 +78,7 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
     console.log("currentCityItem is now: " + pageContents[cityName].cityItems[itemNo].cityItemMenuOption + "(" + currentCityItem + ")");
   }
   else {    /* TODO: dynamic generation of non-gallery city items */
-
+    $('.city-items-container').append(pageContents[cityName].cityItems[itemNo].contentText);
   }
   
   
