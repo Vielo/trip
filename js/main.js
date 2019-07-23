@@ -42,83 +42,31 @@ function loadNewCity(cityName) {
   };
   loadNewCityItem(tempCityName, 0);
 
-}
+};
 
 function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
   $('.city-items-container').empty();
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
   if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
-    $('.city-items-container').append(`<div class="city-item gallery-container"><div class="slideshow-container"></div></div>`);
+    $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
+    data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false"></div></div>`);
     var tempLength = Object.keys(pageContents[cityName].cityItems[itemNo].images)
     console.log('number of images: ' + tempLength.length);
+    var tempArray = [];
     for (i = 0; i < tempLength.length; i++) {
-      $('.slideshow-container').append(`<div class="mySlides fade">
-      <div class="numbertext">${i+1} / ${tempLength.length}</div>
-      <img src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%"></div>`);
+      tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`},)
+      console.log(`img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}.jpg, thumb: img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}_thumb.jpg`);
+      console.log(`fotorama image (${i}.jpg) added`);
       
     }
-    $('.slideshow-container').append(`<a class="prev" onclick="plusSlides(-1,'${cityName}',${itemNo})">&#10094;</a>
-    <a class="next" onclick="plusSlides(1,'${cityName}',${itemNo})">&#10095;</a>
-    <div class="caption-container">
-        <p id="caption-headline"></p>
-        <p id="caption-body" class="caption-small"></p>
-    </div>`);
-    $('.city-item.gallery-container').append(`<div class="thumbnail-column"></div>`);
-    for (i = 0; i < tempLength.length; i++) {
-      $('.thumbnail-column').append(`<div class="column">
-      <img class="demo cursor" src="img\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}\\${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_max.jpg" style="width:100%" onclick="currentSlide(${i+1},'${cityName}',${itemNo})" alt="${pageContents[cityName].cityItems[itemNo].cityItemMenuOption}"></div>`)
-    } 
-    slideIndex = 1;
-    console.log("slide index reset, current value: " + slideIndex)
-    console.log("page content cityName is now: " + cityName);
-    showSlides(1, cityName, itemNo); 
-    currentCity = cityName;
-    console.log("currentCity is now: " + currentCity);
-    currentCityItem = itemNo;
-    console.log("currentCityItem is now: " + pageContents[cityName].cityItems[itemNo].cityItemMenuOption + "(" + currentCityItem + ")");
+    $('.fotorama').fotorama({
+      data: tempArray
+    });
+    $(function () {
+      $('.fotorama').fotorama();
+    });
   }
-  else {    /* TODO: dynamic generation of non-gallery city items */
+  else {    
     $('.city-items-container').append(pageContents[cityName].cityItems[itemNo].contentText);
   }
-  
-  
-}
-
-
-/* The below controls how the gallery behaves */
-var slideIndex = 1;
-
-var currentCity;
-var currentCityItem;
-var slideIndex = 1;
-
-
-function plusSlides(n, currentCity, currentCityItem) {
-showSlides(slideIndex += n, currentCity, currentCityItem);
-}
-
-function currentSlide(n, currentCity, currentCityItem) {
-    showSlides(slideIndex = n, currentCity, currentCityItem);
-}
-
-function showSlides(n, o, p) {        /* n is current slide, o is used to determine site-content info for loading the captions, p is ued to determine specific city item */
-var i;
-var slides = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("demo");
-var captionHeadline = document.getElementById("caption-headline");
-var captionBody = document.getElementById("caption-body");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-tempSlide = `img${slideIndex}`;
-console.log('slide index: ' + slideIndex);
-captionHeadline.innerHTML = pageContents[o].cityItems[p].images[tempSlide][0];
-captionBody.innerHTML = pageContents[o].cityItems[p].images[tempSlide][1];
 }

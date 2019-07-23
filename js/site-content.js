@@ -72,7 +72,12 @@ var pageContents = {
                     img3: ["item1_ Caption Headline 3", "item1_ Caption Body 3"],
                     img4: ["item1_ Caption Headline 4", "item1_ Caption Body 4"],
                     img5: ["item1_ Caption Headline 5", "item1_ Caption Body 5"],
-                    img6: ["item1_ Caption Headline 6", "item1_ Caption Body 6"]
+                    img6: ["item1_ Caption Headline 6", "item1_ Caption Body 6"],
+                    img7: ["item1_ Caption Headline 7", "item1_ Caption Body 7"],
+                    img8: ["item1_ Caption Headline 8", "item1_ Caption Body 8"],
+                    img9: ["item1_ Caption Headline 9", "item1_ Caption Body 9"],
+                    img10: ["item1_ Caption Headline 10", "item1_ Caption Body 10"],
+                    img11: ["item1_ Caption Headline 11", "item1_ Caption Body 11"],
                 }
             },
             {
