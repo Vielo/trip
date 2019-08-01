@@ -36,7 +36,6 @@ function loadNewCity(cityName) {
   console.log("city items amount: " + pageContents[tempCityName].cityItems.length);
   $('#item-menu').empty();
   for (i = 0; i < pageContents[tempCityName].cityItems.length; i++) {
-    console.log('city items (' + i + ') loop interation started');
     $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${tempCityName}',${i})"><div>${pageContents[cityName].cityItems[i].cityItemMenuOption}</div></div>`);
     console.log('city items (' + i + ') loop iteration complete')
   };
@@ -46,25 +45,44 @@ function loadNewCity(cityName) {
 
 function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
   $('.city-items-container').empty();
+  var tempArray = [];
+  var imgCheckForVideo = false;   /* used to check whether a gallery component exists, used by the video Fotorama component to determine whether is should create one */
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
   if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
     $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
-    data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false"></div></div>`);
+    data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
+    imgCheckForVideo = true;
+    console.log(imgCheckForVideo.length);
     var tempLength = Object.keys(pageContents[cityName].cityItems[itemNo].images)
     console.log('number of images: ' + tempLength.length);
-    var tempArray = [];
     for (i = 0; i < tempLength.length; i++) {
-      tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`},)
-      console.log(`img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}.jpg, thumb: img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}_thumb.jpg`);
-      console.log(`fotorama image (${i}.jpg) added`);
-      
-    }
+      var tmpImg = `img${i+1}`;
+      tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`, caption: `${pageContents[cityName].cityItems[itemNo].images[tmpImg]}`});
+      console.log(`img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg, thumb: img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`);
+      console.log(`fotorama image (${i+1}.jpg) added`);
+    };
+    console.log(tempArray);
     $('.fotorama').fotorama({
       data: tempArray
     });
-    $(function () {
-      $('.fotorama').fotorama();
+  }
+  if (pageContents[cityName].cityItems[itemNo].showVideos) {
+    if (imgCheckForVideo == false) {
+      $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
+    }
+    var tempVidLength = Object.keys(pageContents[cityName].cityItems[itemNo].videos)
+    console.log("number of videos: " + tempVidLength.length);
+    for (j = 0; j < tempVidLength.length; j++) {
+      console.log(tempVidLength[j]);
+      var tmpVid = `vid${j+1}`;
+      console.log(pageContents[cityName].cityItems[itemNo].videos[tmpVid]);
+      tempArray.push({video: pageContents[cityName].cityItems[itemNo].videos[tmpVid]});
+    };
+    console.log(tempArray);
+    $('.fotorama').fotorama({
+      data: tempArray
     });
+    
   }
   else {    
     $('.city-items-container').append(pageContents[cityName].cityItems[itemNo].contentText);

@@ -3,52 +3,46 @@ var pageContents = {
         headlineData: ["Denver", "14.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "dyn_ denv flight",
-                cityItemCodename: "",
+                cityItemMenuOption: "Lot",
+                cityItemCodename: "denver1_arrival",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             },
             {
-                cityItemMenuOption: "dyn_ denv first impressions",
-                cityItemCodename: "",
+                cityItemMenuOption: "Pierwsze wrażenia",
+                cityItemCodename: "denver1_first_impressions",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
             },
-            {
-                cityItemMenuOption: "dyn_ denv hotel",
-                cityItemCodename: "",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
-            }
         ]
     }, 
     idaho_springs: {        /* CITY 2: IDAHO SPRINGS */
         headlineData: ["Idaho Springs", "15.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "dyn_ idaho option1",
-                cityItemCodename: "",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
+                cityItemMenuOption: "Rocky Mountains National Park",
+                cityItemCodename: "rocky_mountains",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
+                    img1: "Rocky Mountains National Park",
+                    img2: "Rocky Mountains National Park",
+                    img3: "Rocky Mountains National Park",
+                    img4: "Rocky Mountains National Park",
+                    img5: "Rocky Mountains National Park",
+                    img6: "Rocky Mountains National Park",
                 }
             },
             {
-                cityItemMenuOption: "dyn_ idaho option2",
-                cityItemCodename: "",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
+                cityItemMenuOption: "Grand Lake",
+                cityItemCodename: "grand_lake",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
+                    img1: "Grand Lake",
+                    img2: "Grand Lake",
+                    img3: "Grand Lake",
+                    img4: "Grand Lake",
+                    img5: "Grand Lake",
+                    img6: "Grand Lake",
                 }
             },
             {
@@ -67,17 +61,50 @@ var pageContents = {
                 cityItemCodename: "georgetown",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: ["item1_ Caption Headline 1", "item1_ Caption Body 1"],
-                    img2: ["item1_ Caption Headline 2", "item1_ Caption Body 2"],
-                    img3: ["item1_ Caption Headline 3", "item1_ Caption Body 3"],
-                    img4: ["item1_ Caption Headline 4", "item1_ Caption Body 4"],
-                    img5: ["item1_ Caption Headline 5", "item1_ Caption Body 5"],
-                    img6: ["item1_ Caption Headline 6", "item1_ Caption Body 6"],
-                    img7: ["item1_ Caption Headline 7", "item1_ Caption Body 7"],
-                    img8: ["item1_ Caption Headline 8", "item1_ Caption Body 8"],
-                    img9: ["item1_ Caption Headline 9", "item1_ Caption Body 9"],
-                    img10: ["item1_ Caption Headline 10", "item1_ Caption Body 10"],
-                    img11: ["item1_ Caption Headline 11", "item1_ Caption Body 11"],
+                    img1: "item1_ Caption Headline 1",
+                    img2: "item1_ Caption Headline 2",
+                    img3: "item1_ Caption Headline 3",
+                    img4: "item1_ Caption Headline 4",
+                    img5: "item1_ Caption Headline 5",
+                    img6: "item1_ Caption Headline 6",
+                    img7: "item1_ Caption Headline 7",
+                    img8: "item1_ Caption Headline 8",
+                    img9: "item1_ Caption Headline 9",
+                    img10: "item1_ Caption Headline 10",
+                    img11: "item1_ Caption Headline 11",
+                }
+            },
+            {
+                cityItemMenuOption: "Interstate 70 & Loveland Pass",
+                cityItemCodename: "interstate_70",
+                showGallery: false,  /* decides whether to display the gallery for the city item */
+                images: {   /* controls the number of images passed to the gallery and determines their captions */
+                    img1: "Interstate 70 & Loveland Pass",
+                    img2: "Interstate 70 & Loveland Pass",
+                    img3: "Interstate 70 & Loveland Pass",
+                    img4: "Interstate 70 & Loveland Pass",
+                    img5: "Interstate 70 & Loveland Pass",
+                    img6: "Interstate 70 & Loveland Pass",
+                    img7: "Interstate 70 & Loveland Pass",
+                },
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/9w6fi_abVs4",
+                    vid2: "https://youtu.be/hYkps22-R4g",
+                    vid3: "https://youtu.be/Lj3pR2MusVI",
+                }
+            },
+            {
+                cityItemMenuOption: "Great Junction",
+                cityItemCodename: "great_junction",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                images: {   /* controls the number of images passed to the gallery and determines their captions */
+                    img1: "Great Junction",
+                    img2: "Great Junction",
+                    img3: "Great Junction",
+                    img4: "Great Junction",
+                    img5: "Great Junction",
+                    img6: "Great Junction",
                 }
             },
             {
@@ -93,84 +120,122 @@ var pageContents = {
                     img6: "item2_Caption 6",
                 }
             },
-            {
-                cityItemMenuOption: "Wellington",
-                cityItemCodename: "wellington",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
-            }
+            
         ]
     },
     kanab: {        /* CITY 4: KANAB */
         headlineData: ["Kanab", "17-18.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "dyn_ kanab option1",
-                cityItemCodename: "",
+                cityItemMenuOption: "Red Canyon",
+                cityItemCodename: "red_canyon",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: ["kanab_ item1_Caption 1", "kanab item1 caption body"],
-                    img2: ["kanab_ item1_Caption 2", "kanab item2 caption body"],
-                    img3: ["kanab_ item1_Caption 3", "kanab item3 caption body"],
-                    img4: ["kanab_ item1_Caption 4", "kanab item4 caption body"],
-                    img5: ["kanab_ item1_Caption 5", "kanab item5 caption body"],
-                    img6: ["kanab_ item1_Caption 6", "kanab item6 caption body"],
+                    img1: "Red Canyon",
+                    img2: "Red Canyon",
+                    img3: "Red Canyon",
+                    img4: "Red Canyon",
+                    img5: "Red Canyon",
+                    img6: "Red Canyon",
+                    img7: "Red Canyon",
                 }
             },
             {
-                cityItemMenuOption: "dyn_ kanab option2",
-                cityItemCodename: "",
+                cityItemMenuOption: "Bryce National Park",
+                cityItemCodename: "bryce_national_park",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
+                    img1: "Bryce National Park",
+                    img2: "Bryce National Park",
+                    img3: "Bryce National Park",
+                    img4: "Bryce National Park",
+                    img5: "Bryce National Park",
+                    img6: "Bryce National Park",
+                    img7: "Bryce National Park",
+                    img8: "Bryce National Park",
+                    img9: "Bryce National Park",
+                    img10: "Bryce National Park",
+                    img11: "Bryce National Park",
+                    img12: "Bryce National Park",
+                    img13: "Bryce National Park",
+                    img14: "Bryce National Park",
+                    img15: "Bryce National Park",
+                    img16: "Bryce National Park",
+                    img17: "Bryce National Park",
+                    img18: "Bryce National Park",
+                    img19: "Bryce National Park",
+                    img20: "Bryce National Park",
+                    img21: "Bryce National Park",
                 }
             },
             {
-                cityItemMenuOption: "dyn_ kanab option3",
+                cityItemMenuOption: "Kanab",
+                cityItemCodename: "kanab",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
-            }
+                contentText: `<p>Miasteczko w mocno westernowym stylu, nakręcono w nim zresztą wiele westernów. Na początku kariery grywał w nich również Jack Nicholson.</p><p>Nocowaliśmy w Bunkhouse Hostel, ale raczej tego miejsca nie polecamy: <ul><li>zero prywatności</li><li>restrykcyjne zasady (pracują z młodzieżą, więc jakikolwiek alkohol czy cokolwiek "niestosownego" jest zabronione</li><li>wszędzie pełno rozwydrzonych i rozwrzeszczanych dzieciaków, w tym rodziny właścicieli tego przybytku</li><li>beznadziejne śniadania, nawet jak na amerykańskie standardy</li></ul></p><p>Obiad jedliśmy w Rocking V Cafe, i o ile jedzenie było smaczne, to ponieważ lokal należał do kategorii "fine dining" (restauracje, a nie bary), to bardzo się cenili. Ogólnie raczej nie warto, tym bardziej, że na drugi dzień odkryliśmy Wild Thyme Cafe, które było już ZNACZNIE lepsze - smaczniejsze i przynajmniej o połowę droższe, a jednocześnie bezpretensjonalne.</p>`
+            },
+            {
+                cityItemMenuOption: "Grand Canyon – North Rim",
+                cityItemCodename: "grand_canyon_north_rim",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                images: {   /* controls the number of images passed to the gallery and determines their captions */
+                    img1: "Grand Canyon – North Rim",
+                    img2: "Grand Canyon – North Rim",
+                    img3: "Grand Canyon – North Rim",
+                    img4: "Grand Canyon – North Rim",
+                    img5: "Grand Canyon – North Rim",
+                    img6: "Grand Canyon – North Rim",
+                }
+            },
+            {
+                cityItemMenuOption: "Pink Coral Sand Dunes State Park",
+                cityItemCodename: "pink_coral_sand_dunes_state_park",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                images: {   /* controls the number of images passed to the gallery and determines their captions */
+                    img1: "Pink Coral Sand Dunes State Park",
+                    img2: "Pink Coral Sand Dunes State Park",
+                    img3: "Pink Coral Sand Dunes State Park",
+                    img4: "Pink Coral Sand Dunes State Park",
+                    img5: "Pink Coral Sand Dunes State Park",
+                    img6: "Pink Coral Sand Dunes State Park",
+                }
+            },
         ]
     },
     provo: {        /* CITY 5: PROVO */
         headlineData: ["Provo", "19.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "dyn_ provo option1",
-                cityItemCodename: "",
-                showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
-                }
-            },
-            {
-                cityItemMenuOption: "dyn_ provo option2",
-                cityItemCodename: "",
-                showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
-                }
-            },
-            {
-                cityItemMenuOption: "dyn_ provo option3",
-                cityItemCodename: "",
+                cityItemMenuOption: "Provo",
+                cityItemCodename: "provo",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+                contentText: `<p>Powrót do cywilizacji i dużych aglomeracji miejskich był bardzo bolesny. Pierwotnie planowaliśmy zobaczyć też Salt Lake City, ale sam Provo tak nas wymęczyło, że daliśmy sobie spokój. Ruch na wiaduktach oraz sam ogrom aglomeracji skutecznie nas zniechęciły.</p><p>Obiad zjedliśmy w podrzędnym meksykańskim fastfoodzie. Jakościowo było tak sobie, ale przynajmniej tanio. Właściciel na pewno się zdziwił, że do jego lokalu zawitali turyści.</p><p>Hotel był świetny (Baymont by Wyndham), zwłaszcza w porównaniu z niektórymi noclegami do tej pory. Co ciekawe, wcale nie było też najdrożej, do tego było blisko do drogi wylotowej na dalszą trasę.</p>`
+            },
+            {
+                cityItemMenuOption: "Utah Lake State Park",
+                cityItemCodename: "utah_lake_state_park",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                images: {   /* controls the number of images passed to the gallery and determines their captions */
+                    img1: "Utah Lake State Park (Komarowo)",
+                    img2: "Utah Lake State Park (Komarowo)",
+                    img3: "Utah Lake State Park (Komarowo)",
+                    img4: "Utah Lake State Park (Komarowo)",
+                    img5: "Utah Lake State Park (Komarowo)",
+                    img6: "Utah Lake State Park (Komarowo)",
+                }
+            },
+            {
+                cityItemMenuOption: "Bridal Veil Falls",
+                cityItemCodename: "bridal_veil_falls",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                images: {   /* controls the number of images passed to the gallery and determines their captions */
+                    img1: "Bridal Veil Falls",
+                    img2: "Bridal Veil Falls",
+                    img3: "Bridal Veil Falls",
+                    img4: "Bridal Veil Falls",
+                    img5: "Bridal Veil Falls",
+                    img6: "Bridal Veil Falls",
+                }
             }
         ]
     },
@@ -178,29 +243,22 @@ var pageContents = {
         headlineData: ["Pinedale", "20.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "dyn_ pin option1",
-                cityItemCodename: "",
-                showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
-                }
+                cityItemMenuOption: "Pinedale",
+                cityItemCodename: "pinedale",
+                showGallery: false,  /* decides whether to display the gallery for the city item */
+                contentText: `<p>Koszmarny dojazd z Provo, te 300 mil ciągnęło się w nieskończoność. Setki kilometrów absolutnych pustkowi, na których nie było NIC. Do tego wariowały nam mapy google, bo zapomniałem pobrać trasę do trybu offline, więc nadłożyliśmy drogi. Po drodze zwiedziliśmy historyczne centrum niewielkiego miasteczka, niestety nie pamiętam jakiego.</p>`
             },
             {
-                cityItemMenuOption: "dyn_ pin option2",
-                cityItemCodename: "",
+                cityItemMenuOption: "Fremont Lake",
+                cityItemCodename: "fremont_lake",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
+                    img1: "Fremont Lake",
+                    img2: "Fremont Lake",
+                    img3: "Fremont Lake",
+                    img4: "Fremont Lake",
+                    img5: "Fremont Lake",
+                    img6: "Fremont Lake",
                 }
             },
             {
@@ -215,8 +273,8 @@ var pageContents = {
         headlineData: ["Cody", "21-23.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "dyn_ cody option1",
-                cityItemCodename: "",
+                cityItemMenuOption: "Cody",
+                cityItemCodename: "cody",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_Caption 1",
