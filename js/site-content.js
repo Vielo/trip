@@ -62,73 +62,43 @@ var pageContents = {
                 cityItemMenuOption: "Georgetown",
                 cityItemCodename: "georgetown",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                showVideos: false,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_ Caption Headline 1",
-                    img2: "item1_ Caption Headline 2",
-                    img3: "item1_ Caption Headline 3",
-                    img4: "item1_ Caption Headline 4",
-                    img5: "item1_ Caption Headline 5",
-                    img6: "item1_ Caption Headline 6",
-                    img7: "item1_ Caption Headline 7",
-                    img8: "item1_ Caption Headline 8",
-                    img9: "item1_ Caption Headline 9",
-                    img10: "item1_ Caption Headline 10",
-                    img11: "item1_ Caption Headline 11",
-                }                
+                imagesNo: 11,
+                caption: "Georgetown",
+                showVideos: false,              
             },
             {
                 cityItemMenuOption: "Interstate 70 & Loveland Pass",
                 cityItemCodename: "interstate_70",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 16,
+                caption: "Interstate 70 & Loveland Pass",
                 showVideos: true,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Interstate 70 & Loveland Pass",
-                    img2: "Interstate 70 & Loveland Pass",
-                    img3: "Interstate 70 & Loveland Pass",
-                    img4: "Interstate 70 & Loveland Pass",
-                    img5: "Interstate 70 & Loveland Pass",
-                    img6: "Interstate 70 & Loveland Pass",
-                    img7: "Interstate 70 & Loveland Pass",
-                    img8: "Interstate 70 & Loveland Pass",
-                    img9: "Interstate 70 & Loveland Pass",
-                    img10: "Interstate 70 & Loveland Pass",
-                    img11: "Interstate 70 & Loveland Pass",
-                    img12: "Interstate 70 & Loveland Pass",
-                },
                 videos: {
                     vid1: "https://youtu.be/9w6fi_abVs4",
                     vid2: "https://youtu.be/hYkps22-R4g",
                     vid3: "https://youtu.be/Lj3pR2MusVI",
+                    vid4: "https://youtu.be/_Jpuw1yH6A8",
+                    vid5: "https://youtu.be/b8x6Lus51us",
+                    vid6: "https://youtu.be/qLkArWiELRM",
+                    vid7: "https://youtu.be/0N4JClP7uIU",
+                    vid8: "https://youtu.be/gz17E-foVQc"
                 }
             },
             {
                 cityItemMenuOption: "Great Junction",
                 cityItemCodename: "great_junction",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 0,
+                caption: "none",
                 showVideos: false,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Great Junction",
-                    img2: "Great Junction",
-                    img3: "Great Junction",
-                    img4: "Great Junction",
-                    img5: "Great Junction",
-                    img6: "Great Junction",
-                }
             },
             {
                 cityItemMenuOption: "Colorado National Monument",
                 cityItemCodename: "colorado_national_monument",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 6,
+                caption: "Colorado National Monument",
                 showVideos: false,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
-                }
             },
             
         ]
@@ -140,45 +110,17 @@ var pageContents = {
                 cityItemMenuOption: "Red Canyon",
                 cityItemCodename: "red_canyon",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 7,
+                caption: "Red Canyon",
                 showVideos: false,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Red Canyon",
-                    img2: "Red Canyon",
-                    img3: "Red Canyon",
-                    img4: "Red Canyon",
-                    img5: "Red Canyon",
-                    img6: "Red Canyon",
-                    img7: "Red Canyon",
-                }
             },
             {
                 cityItemMenuOption: "Bryce National Park",
                 cityItemCodename: "bryce_national_park",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 21,
+                caption: "Bryce National Park",
                 showVideos: false,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Bryce National Park",
-                    img2: "Bryce National Park",
-                    img3: "Bryce National Park",
-                    img4: "Bryce National Park",
-                    img5: "Bryce National Park",
-                    img6: "Bryce National Park",
-                    img7: "Bryce National Park",
-                    img8: "Bryce National Park",
-                    img9: "Bryce National Park",
-                    img10: "Bryce National Park",
-                    img11: "Bryce National Park",
-                    img12: "Bryce National Park",
-                    img13: "Bryce National Park",
-                    img14: "Bryce National Park",
-                    img15: "Bryce National Park",
-                    img16: "Bryce National Park",
-                    img17: "Bryce National Park",
-                    img18: "Bryce National Park",
-                    img19: "Bryce National Park",
-                    img20: "Bryce National Park",
-                    img21: "Bryce National Park",
-                }
             },
             {
                 cityItemMenuOption: "Kanab",
@@ -190,47 +132,9 @@ var pageContents = {
                 cityItemMenuOption: "Grand Canyon – North Rim",
                 cityItemCodename: "grand_canyon_north_rim",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 38,
+                caption: "Grand Canyon - North Rim",
                 showVideos: true,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Grand Canyon – North Rim",
-                    img2: "Grand Canyon – North Rim",
-                    img3: "Grand Canyon – North Rim",
-                    img4: "Grand Canyon – North Rim",
-                    img5: "Grand Canyon – North Rim",
-                    img6: "Grand Canyon – North Rim",
-                    img7: "Grand Canyon – North Rim",
-                    img8: "Grand Canyon – North Rim",
-                    img9: "Grand Canyon – North Rim",
-                    img10: "Grand Canyon – North Rim",
-                    img11: "Grand Canyon – North Rim",
-                    img12: "Grand Canyon – North Rim",
-                    img13: "Grand Canyon – North Rim",
-                    img14: "Grand Canyon – North Rim",
-                    img15: "Grand Canyon – North Rim",
-                    img16: "Grand Canyon – North Rim",
-                    img17: "Grand Canyon – North Rim",
-                    img18: "Grand Canyon – North Rim",
-                    img19: "Grand Canyon – North Rim",
-                    img20: "Grand Canyon – North Rim",
-                    img21: "Grand Canyon – North Rim",
-                    img22: "Grand Canyon – North Rim",
-                    img23: "Grand Canyon – North Rim",
-                    img24: "Grand Canyon – North Rim",
-                    img25: "Grand Canyon – North Rim",
-                    img26: "Grand Canyon – North Rim",
-                    img27: "Grand Canyon – North Rim",
-                    img28: "Grand Canyon – North Rim",
-                    img29: "Grand Canyon – North Rim",
-                    img30: "Grand Canyon – North Rim",
-                    img31: "Grand Canyon – North Rim",
-                    img32: "Grand Canyon – North Rim",
-                    img33: "Grand Canyon – North Rim",
-                    img34: "Grand Canyon – North Rim",
-                    img35: "Grand Canyon – North Rim",
-                    img36: "Grand Canyon – North Rim",
-                    img37: "Grand Canyon – North Rim",
-                    img38: "Grand Canyon – North Rim",
-                },
                 videos: {
                     vid1: "https://youtu.be/qoR1TJ6__AQ",
                     vid2: "https://youtu.be/pDRQOptBZ8s",
@@ -244,16 +148,9 @@ var pageContents = {
                 cityItemMenuOption: "Pink Coral Sand Dunes State Park",
                 cityItemCodename: "pink_coral_sand_dunes_state_park",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 7,
+                caption: "Pink Coral Sand Dunes State Park",
                 showVideos: true,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Pink Coral Sand Dunes State Park",
-                    img2: "Pink Coral Sand Dunes State Park",
-                    img3: "Pink Coral Sand Dunes State Park",
-                    img4: "Pink Coral Sand Dunes State Park",
-                    img5: "Pink Coral Sand Dunes State Park",
-                    img6: "Pink Coral Sand Dunes State Park",
-                    img7: "Pink Coral Sand Dunes State Park",
-                },
                 videos: {
                     vid1: "https://youtu.be/zkCT5k2prvY",
                     vid2: "https://youtu.be/AYBXNrcxtpU"
@@ -274,26 +171,24 @@ var pageContents = {
                 cityItemMenuOption: "Utah Lake State Park",
                 cityItemCodename: "utah_lake_state_park",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Utah Lake State Park (Komarowo)",
-                    img2: "Utah Lake State Park (Komarowo)",
-                    img3: "Utah Lake State Park (Komarowo)",
-                    img4: "Utah Lake State Park (Komarowo)",
-                    img5: "Utah Lake State Park (Komarowo)",
-                    img6: "Utah Lake State Park (Komarowo)",
+                imagesNo: 4,
+                caption: "Utah Lake State Park",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/oAeZHJX7Oj4",
+                    vid2: "https://youtu.be/YfCyitY1RF4"
                 }
             },
             {
                 cityItemMenuOption: "Bridal Veil Falls",
                 cityItemCodename: "bridal_veil_falls",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Bridal Veil Falls",
-                    img2: "Bridal Veil Falls",
-                    img3: "Bridal Veil Falls",
-                    img4: "Bridal Veil Falls",
-                    img5: "Bridal Veil Falls",
-                    img6: "Bridal Veil Falls",
+                imagesNo: 3,
+                caption: "Bridal Veil Falls",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/nbRwALHL_FI",
+                    vid2: "https://youtu.be/FzQplX0Tlww"
                 }
             }
         ]
@@ -311,14 +206,9 @@ var pageContents = {
                 cityItemMenuOption: "Fremont Lake",
                 cityItemCodename: "fremont_lake",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Fremont Lake",
-                    img2: "Fremont Lake",
-                    img3: "Fremont Lake",
-                    img4: "Fremont Lake",
-                    img5: "Fremont Lake",
-                    img6: "Fremont Lake",
-                }
+                imagesNo: 12,
+                caption: "Fremont Lake",
+                showVideos: false,
             },
             {
                 cityItemMenuOption: "dyn_ pin option3",

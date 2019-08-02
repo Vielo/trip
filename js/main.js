@@ -52,11 +52,8 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
     $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
     data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
     imgCheckForVideo = true;
-    var tempLength = Object.keys(pageContents[cityName].cityItems[itemNo].images)
-    console.log('number of images: ' + tempLength.length);
-    for (i = 0; i < tempLength.length; i++) {
-      var tmpImg = `img${i+1}`;
-      tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`, caption: `${pageContents[cityName].cityItems[itemNo].images[tmpImg]}`});
+    for (i = 1; i <= pageContents[cityName].cityItems[itemNo].imagesNo; i++) {
+      tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}_thumb.jpg`, caption: `${pageContents[cityName].cityItems[itemNo].caption} (${i}/${pageContents[cityName].cityItems[itemNo].imagesNo})`});
     };
     console.log(tempArray);
     if (pageContents[cityName].cityItems[itemNo].showVideos == false) {
