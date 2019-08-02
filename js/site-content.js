@@ -77,7 +77,7 @@ var pageContents = {
             {
                 cityItemMenuOption: "Interstate 70 & Loveland Pass",
                 cityItemCodename: "interstate_70",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
+                showGallery: true,  /* decides whether to display the gallery for the city item */
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Interstate 70 & Loveland Pass",
                     img2: "Interstate 70 & Loveland Pass",
@@ -86,6 +86,11 @@ var pageContents = {
                     img5: "Interstate 70 & Loveland Pass",
                     img6: "Interstate 70 & Loveland Pass",
                     img7: "Interstate 70 & Loveland Pass",
+                    img8: "Interstate 70 & Loveland Pass",
+                    img9: "Interstate 70 & Loveland Pass",
+                    img10: "Interstate 70 & Loveland Pass",
+                    img11: "Interstate 70 & Loveland Pass",
+                    img12: "Interstate 70 & Loveland Pass",
                 },
                 showVideos: true,
                 videos: {

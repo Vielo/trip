@@ -52,19 +52,19 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
     $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
     data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
     imgCheckForVideo = true;
-    console.log(imgCheckForVideo.length);
     var tempLength = Object.keys(pageContents[cityName].cityItems[itemNo].images)
     console.log('number of images: ' + tempLength.length);
     for (i = 0; i < tempLength.length; i++) {
       var tmpImg = `img${i+1}`;
       tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`, caption: `${pageContents[cityName].cityItems[itemNo].images[tmpImg]}`});
-      console.log(`img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}.jpg, thumb: img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i+1}_thumb.jpg`);
-      console.log(`fotorama image (${i+1}.jpg) added`);
     };
     console.log(tempArray);
-    $('.fotorama').fotorama({
-      data: tempArray
-    });
+    if (pageContents[cityName].cityItems[itemNo].showVideos == false) {
+      $('.fotorama').fotorama({
+        data: tempArray
+      });
+    }
+ 
   }
   if (pageContents[cityName].cityItems[itemNo].showVideos) {
     if (imgCheckForVideo == false) {
@@ -81,8 +81,7 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
     console.log(tempArray);
     $('.fotorama').fotorama({
       data: tempArray
-    });
-    
+    });    
   }
   else {    
     $('.city-items-container').append(pageContents[cityName].cityItems[itemNo].contentText);
