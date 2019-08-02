@@ -23,6 +23,7 @@ var pageContents = {
                 cityItemMenuOption: "Rocky Mountains National Park",
                 cityItemCodename: "rocky_mountains",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Rocky Mountains National Park",
                     img2: "Rocky Mountains National Park",
@@ -36,6 +37,7 @@ var pageContents = {
                 cityItemMenuOption: "Grand Lake",
                 cityItemCodename: "grand_lake",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Grand Lake",
                     img2: "Grand Lake",
@@ -60,6 +62,7 @@ var pageContents = {
                 cityItemMenuOption: "Georgetown",
                 cityItemCodename: "georgetown",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item1_ Caption Headline 1",
                     img2: "item1_ Caption Headline 2",
@@ -72,12 +75,13 @@ var pageContents = {
                     img9: "item1_ Caption Headline 9",
                     img10: "item1_ Caption Headline 10",
                     img11: "item1_ Caption Headline 11",
-                }
+                }                
             },
             {
                 cityItemMenuOption: "Interstate 70 & Loveland Pass",
                 cityItemCodename: "interstate_70",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: true,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Interstate 70 & Loveland Pass",
                     img2: "Interstate 70 & Loveland Pass",
@@ -92,7 +96,6 @@ var pageContents = {
                     img11: "Interstate 70 & Loveland Pass",
                     img12: "Interstate 70 & Loveland Pass",
                 },
-                showVideos: true,
                 videos: {
                     vid1: "https://youtu.be/9w6fi_abVs4",
                     vid2: "https://youtu.be/hYkps22-R4g",
@@ -103,6 +106,7 @@ var pageContents = {
                 cityItemMenuOption: "Great Junction",
                 cityItemCodename: "great_junction",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Great Junction",
                     img2: "Great Junction",
@@ -116,6 +120,7 @@ var pageContents = {
                 cityItemMenuOption: "Colorado National Monument",
                 cityItemCodename: "colorado_national_monument",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "item2_Caption 1",
                     img2: "item2_Caption 2",
@@ -135,6 +140,7 @@ var pageContents = {
                 cityItemMenuOption: "Red Canyon",
                 cityItemCodename: "red_canyon",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Red Canyon",
                     img2: "Red Canyon",
@@ -149,6 +155,7 @@ var pageContents = {
                 cityItemMenuOption: "Bryce National Park",
                 cityItemCodename: "bryce_national_park",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: false,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Bryce National Park",
                     img2: "Bryce National Park",
@@ -183,6 +190,7 @@ var pageContents = {
                 cityItemMenuOption: "Grand Canyon – North Rim",
                 cityItemCodename: "grand_canyon_north_rim",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: true,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Grand Canyon – North Rim",
                     img2: "Grand Canyon – North Rim",
@@ -190,12 +198,53 @@ var pageContents = {
                     img4: "Grand Canyon – North Rim",
                     img5: "Grand Canyon – North Rim",
                     img6: "Grand Canyon – North Rim",
+                    img7: "Grand Canyon – North Rim",
+                    img8: "Grand Canyon – North Rim",
+                    img9: "Grand Canyon – North Rim",
+                    img10: "Grand Canyon – North Rim",
+                    img11: "Grand Canyon – North Rim",
+                    img12: "Grand Canyon – North Rim",
+                    img13: "Grand Canyon – North Rim",
+                    img14: "Grand Canyon – North Rim",
+                    img15: "Grand Canyon – North Rim",
+                    img16: "Grand Canyon – North Rim",
+                    img17: "Grand Canyon – North Rim",
+                    img18: "Grand Canyon – North Rim",
+                    img19: "Grand Canyon – North Rim",
+                    img20: "Grand Canyon – North Rim",
+                    img21: "Grand Canyon – North Rim",
+                    img22: "Grand Canyon – North Rim",
+                    img23: "Grand Canyon – North Rim",
+                    img24: "Grand Canyon – North Rim",
+                    img25: "Grand Canyon – North Rim",
+                    img26: "Grand Canyon – North Rim",
+                    img27: "Grand Canyon – North Rim",
+                    img28: "Grand Canyon – North Rim",
+                    img29: "Grand Canyon – North Rim",
+                    img30: "Grand Canyon – North Rim",
+                    img31: "Grand Canyon – North Rim",
+                    img32: "Grand Canyon – North Rim",
+                    img33: "Grand Canyon – North Rim",
+                    img34: "Grand Canyon – North Rim",
+                    img35: "Grand Canyon – North Rim",
+                    img36: "Grand Canyon – North Rim",
+                    img37: "Grand Canyon – North Rim",
+                    img38: "Grand Canyon – North Rim",
+                },
+                videos: {
+                    vid1: "https://youtu.be/qoR1TJ6__AQ",
+                    vid2: "https://youtu.be/pDRQOptBZ8s",
+                    vid3: "https://youtu.be/Kdu-Wb80pr4",
+                    vid4: "https://youtu.be/l-xLXtPHxV0",
+                    vid5: "https://youtu.be/q5rKUUrkv1k",
+                    vid6: "https://youtu.be/ZmyFXhH6f7g",
                 }
             },
             {
                 cityItemMenuOption: "Pink Coral Sand Dunes State Park",
                 cityItemCodename: "pink_coral_sand_dunes_state_park",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: true,
                 images: {   /* controls the number of images passed to the gallery and determines their captions */
                     img1: "Pink Coral Sand Dunes State Park",
                     img2: "Pink Coral Sand Dunes State Park",
@@ -203,6 +252,11 @@ var pageContents = {
                     img4: "Pink Coral Sand Dunes State Park",
                     img5: "Pink Coral Sand Dunes State Park",
                     img6: "Pink Coral Sand Dunes State Park",
+                    img7: "Pink Coral Sand Dunes State Park",
+                },
+                videos: {
+                    vid1: "https://youtu.be/zkCT5k2prvY",
+                    vid2: "https://youtu.be/AYBXNrcxtpU"
                 }
             },
         ]
