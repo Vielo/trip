@@ -222,36 +222,64 @@ var pageContents = {
         headlineData: ["Cody", "21-23.06.2019"],
         cityItems: [
             {
+                cityItemMenuOption: "Jackson i&nbspokolice",
+                cityItemCodename: "jackson",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                showVideos: true,
+                imagesNo: 5,
+                caption: "Jackson (Wyoming) i okolice.",
+                videos: {
+                    vid1: "https://youtu.be/YTC4YKSZSiU",
+                    vid2: "https://youtu.be/aIPLBmb5HgE",
+                    vid3: "https://youtu.be/rYdviFlnzbo",
+                    vid4: "https://youtu.be/lF9Ujk_ZpmA",
+                    vid5: "https://youtu.be/QzIvcpLWZ-A",
+                    vid6: "https://youtu.be/yhyShg5sf-I",
+
+                }
+            },
+            {
+                cityItemMenuOption: "Grand Teton National Park",
+                cityItemCodename: "grand_teton_national_park",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 15,
+                caption: "Grand Teton National Park",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/jh91KVSvstM",
+                    vid2: "https://youtu.be/ZtmS_8_z6Sc",
+                    vid3: "https://youtu.be/-R0Jo0ax-4s"
+                }
+            },
+            {
+                cityItemMenuOption: "Yellowstone National Park, day 1",
+                cityItemCodename: "yellowstone_1",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 35,
+                caption: "Pierwszy dzien w Yellowstone",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/7vyxalvZtjY",
+                    vid2: "https://youtu.be/CQ5kzTQsAs8",
+                    vid3: "https://youtu.be/iJfRayQBXew",
+                    vid4: "https://youtu.be/RzCasAsvh1g",
+                    vid5: "https://youtu.be/_LeSNMAJiwY",
+                    vid6: "https://youtu.be/GpnMjWbO3Mo",
+                    vid7: "https://youtu.be/abQ62wPB3Tg",
+                }
+            },
+            {
                 cityItemMenuOption: "Cody",
-                cityItemCodename: "cody",
-                showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item1_Caption 1",
-                    img2: "item1_Caption 2",
-                    img3: "item1_Caption 3",
-                    img4: "item1_Caption 4",
-                    img5: "item1_Caption 5",
-                    img6: "item1_Caption 6",
-                }
-            },
-            {
-                cityItemMenuOption: "dyn_ cody option2",
-                cityItemCodename: "",
-                showGallery: true,  /* decides whether to display the gallery for the city item */
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "item2_Caption 1",
-                    img2: "item2_Caption 2",
-                    img3: "item2_Caption 3",
-                    img4: "item2_Caption 4",
-                    img5: "item2_Caption 5",
-                    img6: "item2_Caption 6",
-                }
-            },
-            {
-                cityItemMenuOption: "dyn_ cody option3",
-                cityItemCodename: "",
+                cityItemCodename: "yellowstone_1",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+                imagesNo: 0,
+                caption: "Pierwszy dzien w Yellowstone",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/i5TrzS6mLE8",
+                    vid2: "https://youtu.be/rGH6jn3DHcE",
+                    vid3: "https://youtu.be/98evFsL1yzw"
+                }
             }
         ]
     },
