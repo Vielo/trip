@@ -23,15 +23,9 @@ var pageContents = {
                 cityItemMenuOption: "Rocky Mountains National Park",
                 cityItemCodename: "rocky_mountains",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 28,
+                caption: "Rocky Mountains National Park",
                 showVideos: false,
-                images: {   /* controls the number of images passed to the gallery and determines their captions */
-                    img1: "Rocky Mountains National Park",
-                    img2: "Rocky Mountains National Park",
-                    img3: "Rocky Mountains National Park",
-                    img4: "Rocky Mountains National Park",
-                    img5: "Rocky Mountains National Park",
-                    img6: "Rocky Mountains National Park",
-                }
             },
             {
                 cityItemMenuOption: "Grand Lake",
@@ -224,6 +218,7 @@ var pageContents = {
             {
                 cityItemMenuOption: "Jackson i&nbspokolice",
                 cityItemCodename: "jackson",
+                slideText: `<p>Przejeżdżając czuliśmy się trochę jak w Zakopanym, choć na pierwszy (i krótki) rzut oka Jackson jest zdecydowanie ładniejsze</p><p>Jackson to baza noclegowa/imprezowa dla turystów zwiedzających Grand Teton i Yellowstone</p><p>Udało mi się tam kupić softshell w sklepie z używaną odzieżą sportową, bo było strasznie zimno</p>`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 showVideos: true,
                 imagesNo: 5,
@@ -235,7 +230,6 @@ var pageContents = {
                     vid4: "https://youtu.be/lF9Ujk_ZpmA",
                     vid5: "https://youtu.be/QzIvcpLWZ-A",
                     vid6: "https://youtu.be/yhyShg5sf-I",
-
                 }
             },
             {

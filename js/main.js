@@ -46,6 +46,9 @@ function loadNewCity(cityName) {
 function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
   $('.city-items-container').empty();
   var tempArray = [];
+  if (pageContents[cityName].cityItems[itemNo].slideText !== undefined) {
+    tempArray.push({html: `<div class="slide-text">${pageContents[cityName].cityItems[itemNo].slideText}</div>`, thumb: `img/text_icon.png`});
+  }
   var imgCheckForVideo = false;   /* used to check whether a gallery component exists, used by the video Fotorama component to determine whether is should create one */
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
   if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
