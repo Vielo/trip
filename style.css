@@ -89,7 +89,7 @@
 }
 
 .city-item-menu-option {
-    width: 110px;
+    width: 150px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -109,7 +109,8 @@
 }
 
 .city-items-container {
-    width: 800px;
+    width: 700px;
+    margin: auto;
 }
  
 .caption-small {
