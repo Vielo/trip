@@ -4,9 +4,11 @@ var pageContents = {
         cityItems: [
             {
                 cityItemMenuOption: "Lot",
-                cityItemCodename: "denver1_arrival",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+                cityItemCodename: "lot",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 3,
+                caption: "Zdjęcia z lotu",
+                showVideos: false,
             },
             {
                 cityItemMenuOption: "Pierwsze wrażenia",
@@ -56,7 +58,7 @@ var pageContents = {
                 cityItemMenuOption: "Georgetown",
                 cityItemCodename: "georgetown",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                imagesNo: 11,
+                imagesNo: 34,
                 caption: "Georgetown",
                 showVideos: false,              
             },
