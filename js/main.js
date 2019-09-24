@@ -17,6 +17,12 @@ $(document).ready(function() {
   console.log('ready!');
 });
 
+var currentLanguage = "pl";   /* stores current language so that correct copy is loaded from site-content.js, default PL */
+function changeLanguage(lang) {
+  currentLanguage = lang;
+  console.log("Current language is now " + currentLanguage);
+}
+
 
 function openCity(cityName) {
   loadNewCity(cityName);
@@ -43,7 +49,11 @@ function loadNewCity(cityName) {
 
 };
 
+var currentCityNameAndNo = undefined;   /* stores currently open city item for smooth language switch */
+
+
 function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
+  currentCityNameAndNo = [cityName, itemNo];
   $('#city-headline-name').html(pageContents[cityName].cityItems[itemNo].cityItemMenuOption);
   $('.city-items-container').empty();
   var tempArray = [];

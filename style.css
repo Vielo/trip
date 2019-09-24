@@ -2,11 +2,26 @@
     font-family: 'Lato', sans-serif;
 }
 
+.language-selector {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.language-selector div {
+    cursor: pointer;
+}
+
+.language-selector div:nth-child(even) {
+    margin: 0px 4px;
+}
+
 .button-container {
     height: 50px;
     width: 1000px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 5px;
     display: flex;
     -webkit-user-select: none; /* Safari */        
