@@ -57,7 +57,7 @@
 .city-headline {
     margin: 20px 0px;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 .city-headline div:nth-child(1) {
