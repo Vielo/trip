@@ -242,15 +242,15 @@ var pageContents = {
                 videos: {
                     vid1: "https://youtu.be/jh91KVSvstM",
                     vid2: "https://youtu.be/ZtmS_8_z6Sc",
-                    vid3: "https://youtu.be/-R0Jo0ax-4s"
+                    vid3: "https://youtu.be/-R0Jo0ax-4s",
                 }
             },
             {
-                cityItemMenuOption: "Yellowstone National Park, day 1",
+                cityItemMenuOption: "Yellowstone National Park, dzień 1",
                 cityItemCodename: "yellowstone_1",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 35,
-                caption: "Pierwszy dzien w Yellowstone",
+                caption: "Pierwszy dzień w Yellowstone",
                 showVideos: true,
                 videos: {
                     vid1: "https://youtu.be/7vyxalvZtjY",
@@ -263,16 +263,56 @@ var pageContents = {
                 }
             },
             {
+                cityItemMenuOption: "Yellowstone National Park, dzień 2",
+                cityItemCodename: "yellowstone_2",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 29,
+                caption: "Drugi dzień w Yellowstone",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/0dAH0aC2luI",
+                    vid2: "https://youtu.be/BBdU-2_VoRk",
+                    vid3: "https://youtu.be/_MiE-9S99kE",
+                    vid4: "https://youtu.be/GaJzU8m5TJU",
+                    vid5: "https://youtu.be/Mk53jcl2LCM",
+                    vid6: "https://youtu.be/lSFAA65RTZQ",
+                    vid7: "https://youtu.be/ff2PutKVGtw",
+                    vid8: "https://youtu.be/ozcn3adr3Jk",
+                    vif9: "https://youtu.be/DuecLmWQEnw",
+                    vid10: "https://youtu.be/QqHvzCU79MY",
+                }
+            },
+            {
+                cityItemMenuOption: "Yellowstone National Park, dzień 3",
+                cityItemCodename: "yellowstone_3",
+                showGallery: true,  /* decides whether to display the gallery for the city item */
+                imagesNo: 14,
+                caption: "Trzeci (i ostatni) dzień w Yellowstone",
+                showVideos: true,
+                videos: {
+                    vid1: "https://youtu.be/Nb4njcH_mzE",
+                    vid2: "https://youtu.be/HWi8hDJyKEI",
+                    vid3: "https://youtu.be/wMx4367gaio",
+                    vid4: "https://youtu.be/xngGzGYs1es",
+                    vid5: "https://youtu.be/twUo4CrIqp4",
+                    vid6: "https://youtu.be/UI3pp69rB98",
+                    vid7: "https://youtu.be/qlGasF6i5fA",
+                    vid8: "https://youtu.be/4YBGsbVeIb8",
+                    vid9: "https://youtu.be/21H7z6xDHXQ"
+                }
+            },
+            {
                 cityItemMenuOption: "Cody",
-                cityItemCodename: "yellowstone_1",
+                cityItemCodename: "cody_1",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 imagesNo: 0,
-                caption: "Pierwszy dzien w Yellowstone",
+                caption: "Cody",
                 showVideos: true,
                 videos: {
                     vid1: "https://youtu.be/i5TrzS6mLE8",
                     vid2: "https://youtu.be/rGH6jn3DHcE",
-                    vid3: "https://youtu.be/98evFsL1yzw"
+                    vid3: "https://youtu.be/98evFsL1yzw",
+                    vid4: "https://youtu.be/GTSQY8OUkIY",
                 }
             }
         ]
