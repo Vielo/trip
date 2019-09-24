@@ -90,7 +90,7 @@ var pageContents = {
                 cityItemMenuOption: "Colorado National Monument",
                 cityItemCodename: "colorado_national_monument",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                imagesNo: 6,
+                imagesNo: 22,
                 caption: "Colorado National Monument",
                 showVideos: false,
             },
