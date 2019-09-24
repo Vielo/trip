@@ -31,7 +31,7 @@ function openCity(cityName) {
 
 function loadNewCity(cityName) {
   let tempCityName = cityName;
-  $('#city-headline-name').html(pageContents[tempCityName].headlineData[0]);
+  $('#city-headline-name').html(pageContents[cityName].cityItems[0].cityItemMenuOption);
   $('#city-headline-date').html(pageContents[tempCityName].headlineData[1]);
   console.log("city items amount: " + pageContents[tempCityName].cityItems.length);
   $('#item-menu').empty();
@@ -44,6 +44,7 @@ function loadNewCity(cityName) {
 };
 
 function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
+  $('#city-headline-name').html(pageContents[cityName].cityItems[itemNo].cityItemMenuOption);
   $('.city-items-container').empty();
   var tempArray = [];
   if (pageContents[cityName].cityItems[itemNo].slideText !== undefined) {
