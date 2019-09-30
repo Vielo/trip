@@ -1,5 +1,11 @@
+var currentLanguage = "pl";   /* stores current language so that correct copy is loaded from site-content.js, default PL */
+var currentCityNameAndNo = undefined;   /* stores currently open city item for smooth language switch */
+
 $(document).ready(function() {
   $(".col-1of9:first").addClass("col-active");
+  $('.col-1of9-contents-1of3').each(function(i) {
+    $(this).html(langContents.dayButtonLabels[currentLanguage][i])
+});
   loadNewCity("denver1");
   loadNewCityItem("denver1", 0);
   $(".col-1of9").click(function() {
@@ -12,14 +18,31 @@ $(document).ready(function() {
   $("body").on("click", ".city-item-menu-option", function(){
     $('.city-item-menu-option').removeClass("city-item-menu-option-active");
     $(this).toggleClass("city-item-menu-option-active");
+    
   });
   $(".city-item-menu-option:first").addClass("city-item-menu-option-active");
   console.log('ready!');
 });
 
-var currentLanguage = "pl";   /* stores current language so that correct copy is loaded from site-content.js, default PL */
+
 function changeLanguage(lang) {
   currentLanguage = lang;
+  loadNewCityItem(currentCityNameAndNo[0], currentCityNameAndNo[1]);
+  $('.col-1of9-contents-1of3').each(function(i) {
+    $(this).html(langContents.dayButtonLabels[currentLanguage][i])
+  });
+  $('#item-menu').empty();
+  for (i = 0; i < pageContents[currentCityNameAndNo[0]].cityItems.length; i++) {
+    let langTemp = undefined;
+    let cityName = currentCityNameAndNo[0];
+    if (typeof pageContents[cityName].cityItems[i].cityItemMenuOption === 'object' && pageContents[cityName].cityItems[i].cityItemMenuOption !== null) {
+      langTemp = pageContents[cityName].cityItems[i].cityItemMenuOption[currentLanguage];
+    }
+    else {
+      langTemp = pageContents[cityName].cityItems[i].cityItemMenuOption;
+    }
+    $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${currentCityNameAndNo[0]}',${i})"><div>${langTemp}</div></div>`);
+  };
   console.log("Current language is now " + currentLanguage);
 }
 
@@ -37,24 +60,39 @@ function openCity(cityName) {
 
 function loadNewCity(cityName) {
   let tempCityName = cityName;
-  $('#city-headline-name').html(pageContents[cityName].cityItems[0].cityItemMenuOption);
+  currentCityNameAndNo = [cityName, undefined];
+  console.log('currentCityNameAndNo variable is: ' + currentCityNameAndNo);
+  if (typeof pageContents[cityName].cityItems[0].cityItemMenuOption === 'object' && pageContents[cityName].cityItems[0].cityItemMenuOption !== null) {
+    $('#city-headline-name').html(pageContents[cityName].cityItems[0].cityItemMenuOption[currentLanguage]);
+  }
+  else {
+    $('#city-headline-name').html(pageContents[cityName].cityItems[0].cityItemMenuOption);
+  }
   $('#city-headline-date').html(pageContents[tempCityName].headlineData[1]);
   console.log("city items amount: " + pageContents[tempCityName].cityItems.length);
   $('#item-menu').empty();
   for (i = 0; i < pageContents[tempCityName].cityItems.length; i++) {
-    $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${tempCityName}',${i})"><div>${pageContents[cityName].cityItems[i].cityItemMenuOption}</div></div>`);
-    console.log('city items (' + i + ') loop iteration complete')
+    let langTemp = undefined;
+    if (typeof pageContents[cityName].cityItems[i].cityItemMenuOption === 'object' && pageContents[cityName].cityItems[i].cityItemMenuOption !== null) {
+      langTemp = pageContents[cityName].cityItems[i].cityItemMenuOption[currentLanguage];
+    }
+    else {
+      langTemp = pageContents[cityName].cityItems[i].cityItemMenuOption;
+    }
+    $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${tempCityName}',${i})"><div>${langTemp}</div></div>`);
   };
   loadNewCityItem(tempCityName, 0);
 
 };
-
-var currentCityNameAndNo = undefined;   /* stores currently open city item for smooth language switch */
-
-
 function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generation of specific city items */
   currentCityNameAndNo = [cityName, itemNo];
-  $('#city-headline-name').html(pageContents[cityName].cityItems[itemNo].cityItemMenuOption);
+  console.log("currentCityNameAndNo is " + cityName, itemNo);
+  if (typeof pageContents[cityName].cityItems[itemNo].cityItemMenuOption === 'object' && pageContents[cityName].cityItems[itemNo].cityItemMenuOption !== null) {
+    $('#city-headline-name').html(pageContents[cityName].cityItems[itemNo].cityItemMenuOption[currentLanguage]);
+  }
+  else {
+    $('#city-headline-name').html(pageContents[cityName].cityItems[itemNo].cityItemMenuOption);
+  }
   $('.city-items-container').empty();
   var tempArray = [];
   if (pageContents[cityName].cityItems[itemNo].slideText !== undefined) {
@@ -64,12 +102,11 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
   if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
     $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
-    data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
+    data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-fit="cover"></div></div>`);
     imgCheckForVideo = true;
     for (i = 1; i <= pageContents[cityName].cityItems[itemNo].imagesNo; i++) {
       tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}_thumb.jpg`, caption: `${pageContents[cityName].cityItems[itemNo].caption} (${i}/${pageContents[cityName].cityItems[itemNo].imagesNo})`});
     };
-    console.log(tempArray);
     if (pageContents[cityName].cityItems[itemNo].showVideos == false) {
       $('.fotorama').fotorama({
         data: tempArray
@@ -82,14 +119,10 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
       $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
     }
     var tempVidLength = Object.keys(pageContents[cityName].cityItems[itemNo].videos)
-    console.log("number of videos: " + tempVidLength.length);
     for (j = 0; j < tempVidLength.length; j++) {
-      console.log(tempVidLength[j]);
       var tmpVid = `vid${j+1}`;
-      console.log(pageContents[cityName].cityItems[itemNo].videos[tmpVid]);
       tempArray.push({video: pageContents[cityName].cityItems[itemNo].videos[tmpVid]});
     };
-    console.log(tempArray);
     $('.fotorama').fotorama({
       data: tempArray
     });    

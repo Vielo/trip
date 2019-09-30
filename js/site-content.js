@@ -1,9 +1,22 @@
+var langContents = {
+    dayButtonLabels: {
+        pl: ["Dzień 1", "Dzień 2", "Dzień 3", "Dni 4-5", "Dzień 6", "Dzień 7", "Dni 8-10", "Dzień 11", "Dzień 12"],
+        en: ["Day 1", "Day 2", "Day 3", "Days 4-5", "Day 6", "Day 7", "Days 8-10", "Day 11", "Day 12"],
+        de: ["Tag 1", "Tag 2", "Tag 3", "Tage 4-5", "Tag 6", "Tag 7", "Tage 8-10", "Tag 11", "Tag 12"]
+    }
+}
+
 var pageContents = {
     denver1: {      /* CITY 1: DENVER (1) */
         headlineData: ["Denver", "14.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "Lot",
+                cityItemMenuOption:
+                    {
+                        pl: "Lot",
+                        en: "Flight",
+                        de: "Flug",
+                    },
                 cityItemCodename: "lot",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 3,
@@ -11,7 +24,12 @@ var pageContents = {
                 showVideos: false,
             },
             {
-                cityItemMenuOption: "Pierwsze wrażenia",
+                cityItemMenuOption:
+                    {
+                        pl: "Pierwsze wrażenia",
+                        en: "First impressions",
+                        de: "Erste Eindrücke",
+                    },
                 cityItemCodename: "denver1_first_impressions",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
                 contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
@@ -21,7 +39,7 @@ var pageContents = {
     idaho_springs: {        /* CITY 2: IDAHO SPRINGS */
         headlineData: ["Idaho Springs", "15.06.2019"],
         cityItems: [
-            {
+            {   
                 cityItemMenuOption: "Rocky Mountains National Park",
                 cityItemCodename: "rocky_mountains",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
