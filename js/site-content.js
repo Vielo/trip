@@ -224,12 +224,6 @@ var pageContents = {
                 caption: "Fremont Lake",
                 showVideos: false,
             },
-            {
-                cityItemMenuOption: "dyn_ pin option3",
-                cityItemCodename: "",
-                showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
-            }
         ]
     },
     cody: {        /* CITY 7: CODY */
@@ -255,6 +249,7 @@ var pageContents = {
             {
                 cityItemMenuOption: "Grand Teton National Park",
                 cityItemCodename: "grand_teton_national_park",
+                slideText: `<p>Piękne góry, naprawdę świetne widoki</p><p>Złodziejska cena wstępu (35$), a trzeba przez niego przechechać jadąc do Yellowstone od południa, a wracając nie pobierają opłat. Na pewno zrobili to z premedytacją, bo kiedyś mieli też bilet łączony na oba parki.`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 15,
                 caption: "Grand Teton National Park",
@@ -268,8 +263,9 @@ var pageContents = {
             {
                 cityItemMenuOption: "Yellowstone National Park, dzień 1",
                 cityItemCodename: "yellowstone_1",
+                slideText: `<p>Trasa: South Entrance > Grant Village > West Thumb > Bridge Bay > Lake Village > Fishing Bridge > East Entrance</p><p>Po drodze zobaczyliśmy Lewis Falls, Lewis Lake, gejzery w West Thumb i jezioro Yellowstone (ogromne!)</p><p>Widzieliśmy też nasze pierwsze bizony</p><p>Pierwsze wrażenia z Yellowstone były raczej kiepskie, biorąc pod uwagę jak niesamowite rzeczy widzieliśmy do tej pory</p>`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
-                imagesNo: 35,
+                imagesNo: 34,
                 caption: "Pierwszy dzień w Yellowstone",
                 showVideos: true,
                 videos: {

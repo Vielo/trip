@@ -102,7 +102,7 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
   console.log('is there a gallery present? ' +  pageContents[cityName].cityItems[itemNo].showGallery);
   if (pageContents[cityName].cityItems[itemNo].showGallery) {   /* if the gallery property of page-contents City Info is true, proceed with loading the gallery. Otherwise don't and just load the text */
     $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
-    data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-fit="cover"></div></div>`);
+    data-nav="thumbs" data-allowfullscreen="native" data-arrows="true" data-click="true" data-swipe="true" data-transition="slide" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-keyboard="true"></div></div>`);
     imgCheckForVideo = true;
     for (i = 1; i <= pageContents[cityName].cityItems[itemNo].imagesNo; i++) {
       tempArray.push({img: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}.jpg`, thumb: `img/${pageContents[cityName].cityItems[itemNo].cityItemCodename}/${pageContents[cityName].cityItems[itemNo].cityItemCodename}_${i}_thumb.jpg`, caption: `${pageContents[cityName].cityItems[itemNo].caption} (${i}/${pageContents[cityName].cityItems[itemNo].imagesNo})`});
@@ -116,7 +116,8 @@ function loadNewCityItem(cityName, itemNo) {    /* controls the dynamic generati
   }
   if (pageContents[cityName].cityItems[itemNo].showVideos) {
     if (imgCheckForVideo == false) {
-      $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-arrows="true" data-click="true" data-swipe="false" data-transition="crossfade" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-ratio="800/600"></div></div>`);
+      $('.city-items-container').append(`<div class="city-item gallery-container"><div class="fotorama"
+    data-nav="thumbs" data-allowfullscreen="native" data-arrows="true" data-click="true" data-swipe="true" data-transition="slide" data-fit="scaledown" data-thumbwidth="120" data-auto="false" data-width="100%" data-keyboard="true"></div></div>`);
     }
     var tempVidLength = Object.keys(pageContents[cityName].cityItems[itemNo].videos)
     for (j = 0; j < tempVidLength.length; j++) {
