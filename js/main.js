@@ -6,6 +6,11 @@ $(document).ready(function() {
   $('.col-1of9-contents-1of3').each(function(i) {
     $(this).html(langContents.dayButtonLabels[currentLanguage][i])
 });
+  $('.language-button:first').addClass('language-button-active');
+  $("body").on("click", ".language-button", function(){
+    $('.language-button').removeClass("language-button-active");
+    $(this).toggleClass("language-button-active");
+  });
   loadNewCity("denver1");
   loadNewCityItem("denver1", 0);
   $(".col-1of9").click(function() {
@@ -18,7 +23,6 @@ $(document).ready(function() {
   $("body").on("click", ".city-item-menu-option", function(){
     $('.city-item-menu-option').removeClass("city-item-menu-option-active");
     $(this).toggleClass("city-item-menu-option-active");
-    
   });
   $(".city-item-menu-option:first").addClass("city-item-menu-option-active");
   console.log('ready!');
@@ -27,22 +31,12 @@ $(document).ready(function() {
 
 function changeLanguage(lang) {
   currentLanguage = lang;
-  loadNewCityItem(currentCityNameAndNo[0], currentCityNameAndNo[1]);
+  $('.city-item-menu-option > div').each(function(i) {
+    $(this).html(pageContents[currentCityNameAndNo[0]].cityItems[[i]].cityItemMenuOption[currentLanguage])
+  });
   $('.col-1of9-contents-1of3').each(function(i) {
     $(this).html(langContents.dayButtonLabels[currentLanguage][i])
   });
-  $('#item-menu').empty();
-  for (i = 0; i < pageContents[currentCityNameAndNo[0]].cityItems.length; i++) {
-    let langTemp = undefined;
-    let cityName = currentCityNameAndNo[0];
-    if (typeof pageContents[cityName].cityItems[i].cityItemMenuOption === 'object' && pageContents[cityName].cityItems[i].cityItemMenuOption !== null) {
-      langTemp = pageContents[cityName].cityItems[i].cityItemMenuOption[currentLanguage];
-    }
-    else {
-      langTemp = pageContents[cityName].cityItems[i].cityItemMenuOption;
-    }
-    $('#item-menu').append(`<div class="city-item-menu-option" onclick="loadNewCityItem('${currentCityNameAndNo[0]}',${i})"><div>${langTemp}</div></div>`);
-  };
   console.log("Current language is now " + currentLanguage);
 }
 

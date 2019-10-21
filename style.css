@@ -17,6 +17,12 @@
     margin: 0px 4px;
 }
 
+.language-button-active {
+    font-weight: bold;
+    margin-top: 2px;
+    font-size: 1.2em;
+}
+
 .button-container {
     height: 50px;
     width: 1000px;
