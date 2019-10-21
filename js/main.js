@@ -31,12 +31,21 @@ $(document).ready(function() {
 
 function changeLanguage(lang) {
   currentLanguage = lang;
+  cityName = currentCityNameAndNo[0];
+  cityItem = currentCityNameAndNo[1];
+
   $('.city-item-menu-option > div').each(function(i) {
     $(this).html(pageContents[currentCityNameAndNo[0]].cityItems[[i]].cityItemMenuOption[currentLanguage])
   });
   $('.col-1of9-contents-1of3').each(function(i) {
     $(this).html(langContents.dayButtonLabels[currentLanguage][i])
   });
+  if (typeof pageContents[cityName].cityItems[cityItem].cityItemMenuOption === 'object' && pageContents[cityName].cityItems[cityItem].cityItemMenuOption !== null) {
+    $('#city-headline-name').html(pageContents[cityName].cityItems[cityItem].cityItemMenuOption[currentLanguage]);
+  }
+  else {
+    $('#city-headline-name').html(pageContents[cityName].cityItems[cityItem].cityItemMenuOption);
+  }
   console.log("Current language is now " + currentLanguage);
 }
 
