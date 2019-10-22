@@ -18,7 +18,7 @@ $(document).ready(function() {
     $(this).toggleClass('col-active');
     $(".city-item-menu-option").removeClass("city-item-menu-option-active");
     $(".city-item-menu-option:nth-child(1)").toggleClass("city-item-menu-option-active");
-    $(".city-item:nth-child(1)").attr('style','display: flex');
+    
   });
   $("body").on("click", ".city-item-menu-option", function(){
     $('.city-item-menu-option').removeClass("city-item-menu-option-active");

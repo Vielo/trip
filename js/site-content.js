@@ -230,7 +230,12 @@ var pageContents = {
         headlineData: ["Cody", "21-23.06.2019"],
         cityItems: [
             {
-                cityItemMenuOption: "Jackson i&nbspokolice",
+                cityItemMenuOption: 
+                {
+                    pl: "Jackson i&nbspokolice",
+                    en: "Jackson and its surroundings",
+                    de: "Jackson und Umgebung",
+                },
                 cityItemCodename: "jackson",
                 slideText: `<p>Przejeżdżając czuliśmy się trochę jak w Zakopanym, choć na pierwszy (i krótki) rzut oka Jackson jest zdecydowanie ładniejsze</p><p>Jackson to baza noclegowa/imprezowa dla turystów zwiedzających Grand Teton i Yellowstone</p><p>Udało mi się tam kupić softshell w sklepie z używaną odzieżą sportową, bo było strasznie zimno</p>`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
@@ -261,7 +266,12 @@ var pageContents = {
                 }
             },
             {
-                cityItemMenuOption: "Yellowstone National Park, dzień 1",
+                cityItemMenuOption: 
+                {
+                    pl: "Yellowstone National Park, dzień 1",
+                    en: "Yellowstone National Park, day 1",
+                    de: "Yellowstone National Park, Tag 1",
+                },
                 cityItemCodename: "yellowstone_1",
                 slideText: `<p>Trasa: South Entrance > Grant Village > West Thumb > Bridge Bay > Lake Village > Fishing Bridge > East Entrance</p><p>Po drodze zobaczyliśmy Lewis Falls, Lewis Lake, gejzery w West Thumb i jezioro Yellowstone (ogromne!)</p><p>Widzieliśmy też nasze pierwsze bizony</p><p>Pierwsze wrażenia z Yellowstone były raczej kiepskie, biorąc pod uwagę jak niesamowite rzeczy widzieliśmy do tej pory</p>`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
@@ -279,7 +289,12 @@ var pageContents = {
                 }
             },
             {
-                cityItemMenuOption: "Yellowstone National Park, dzień 2",
+                cityItemMenuOption: 
+                {
+                    pl: "Yellowstone National Park, dzień 2",
+                    en: "Yellowstone National Park, day 2",
+                    de: "Yellowstone National Park, Tag 2",
+                },
                 cityItemCodename: "yellowstone_2",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 29,
@@ -299,7 +314,12 @@ var pageContents = {
                 }
             },
             {
-                cityItemMenuOption: "Yellowstone National Park, dzień 3",
+                cityItemMenuOption: 
+                {
+                    pl: "Yellowstone National Park, dzień 3",
+                    en: "Yellowstone National Park, day 3",
+                    de: "Yellowstone National Park, Tag 3",
+                },
                 cityItemCodename: "yellowstone_3",
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 14,
