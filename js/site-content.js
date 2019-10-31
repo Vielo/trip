@@ -140,7 +140,6 @@ var pageContents = {
                 cityItemMenuOption: "Kanab",
                 cityItemCodename: "kanab",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: `<p>Miasteczko w mocno westernowym stylu, nakręcono w nim zresztą wiele westernów. Na początku kariery grywał w nich również Jack Nicholson.</p><p>Nocowaliśmy w Bunkhouse Hostel, ale raczej tego miejsca nie polecamy: <ul><li>zero prywatności</li><li>restrykcyjne zasady (pracują z młodzieżą, więc jakikolwiek alkohol czy cokolwiek "niestosownego" jest zabronione)</li><li>wszędzie pełno rozwydrzonych i rozwrzeszczanych dzieciaków, w tym rodziny właścicieli tego przybytku. Cóż, uroki zwiedzania konserwatywnej części Ameryki</li><li>beznadziejne śniadania, nawet jak na amerykańskie standardy</li></ul></p><p>Obiad jedliśmy w Rocking V Cafe, i o ile jedzenie było smaczne, to ponieważ lokal należał do kategorii "fine dining" (restauracje, a nie bary), to bardzo się cenili. Ogólnie raczej nie warto, tym bardziej, że na drugi dzień odkryliśmy Wild Thyme Cafe, które było już ZNACZNIE lepsze - smaczniejsze i przynajmniej o połowę tańsze, a jednocześnie bezpretensjonalne.</p>`
             },
             {
                 cityItemMenuOption: "Grand Canyon – North Rim",
@@ -179,7 +178,6 @@ var pageContents = {
                 cityItemMenuOption: "Provo",
                 cityItemCodename: "provo",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: `<p>Powrót do cywilizacji i dużych aglomeracji miejskich był bardzo bolesny. Pierwotnie planowaliśmy zobaczyć też Salt Lake City, ale sam Provo tak nas wymęczyło, że daliśmy sobie spokój. Ruch na wiaduktach oraz sam ogrom aglomeracji skutecznie nas zniechęciły.</p><p>Obiad zjedliśmy w podrzędnym meksykańskim fastfoodzie. Jakościowo było tak sobie, ale przynajmniej tanio. Właściciel na pewno się zdziwił, że do jego lokalu zawitali turyści.</p><p>Hotel był świetny (Baymont by Wyndham), zwłaszcza w porównaniu z niektórymi noclegami do tej pory. Co ciekawe, wcale nie było też najdrożej, do tego było blisko do drogi wylotowej na dalszą trasę.</p>`
             },
             {
                 cityItemMenuOption: "Utah Lake State Park",
@@ -214,7 +212,6 @@ var pageContents = {
                 cityItemMenuOption: "Pinedale",
                 cityItemCodename: "pinedale",
                 showGallery: false,  /* decides whether to display the gallery for the city item */
-                contentText: `<p>Koszmarny dojazd z Provo, te 300 mil ciągnęło się w nieskończoność. Setki kilometrów absolutnych pustkowi, na których nie było NIC. Do tego wariowały nam mapy google, bo zapomniałem pobrać trasę do trybu offline, więc nadłożyliśmy drogi. Po drodze zwiedziliśmy historyczne centrum niewielkiego miasteczka, niestety nie pamiętam jakiego.</p>`
             },
             {
                 cityItemMenuOption: "Fremont Lake",
@@ -237,7 +234,6 @@ var pageContents = {
                     de: "Jackson und Umgebung",
                 },
                 cityItemCodename: "jackson",
-                slideText: `<p>Przejeżdżając czuliśmy się trochę jak w Zakopanym, choć na pierwszy (i krótki) rzut oka Jackson jest zdecydowanie ładniejsze</p><p>Jackson to baza noclegowa/imprezowa dla turystów zwiedzających Grand Teton i Yellowstone</p><p>Udało mi się tam kupić softshell w sklepie z używaną odzieżą sportową, bo było strasznie zimno</p><p> </p>`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 showVideos: true,
                 imagesNo: 5,
@@ -254,7 +250,6 @@ var pageContents = {
             {
                 cityItemMenuOption: "Grand Teton National Park",
                 cityItemCodename: "grand_teton_national_park",
-                slideText: `<p>Piękne góry, naprawdę świetne widoki</p><p>Złodziejska cena wstępu (35$), a trzeba przez niego przechechać jadąc do Yellowstone od południa, a wracając nie pobierają opłat. Na pewno zrobili to z premedytacją, bo kiedyś mieli też bilet łączony na oba parki.`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 15,
                 caption: "Grand Teton National Park",
@@ -273,7 +268,6 @@ var pageContents = {
                     de: "Yellowstone National Park, Tag 1",
                 },
                 cityItemCodename: "yellowstone_1",
-                slideText: `<p>Trasa: South Entrance > Grant Village > West Thumb > Bridge Bay > Lake Village > Fishing Bridge > East Entrance</p><p>Po drodze zobaczyliśmy Lewis Falls, Lewis Lake, gejzery w West Thumb i jezioro Yellowstone (ogromne!)</p><p>Widzieliśmy też nasze pierwsze bizony</p><p>Pierwsze wrażenia z Yellowstone były raczej kiepskie, biorąc pod uwagę jak niesamowite rzeczy widzieliśmy do tej pory</p>`,
                 showGallery: true,  /* decides whether to display the gallery for the city item */
                 imagesNo: 34,
                 caption: "Pierwszy dzień w Yellowstone",

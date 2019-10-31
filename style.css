@@ -2,11 +2,17 @@
     font-family: 'Lato', sans-serif;
 }
 
-.language-selector {
-    width: 1000px;
-    margin: auto;
+body {
+    width: 1100px;
+}
+
+.button-language-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+}
+
+.language-selector {
+    display: flex;
 }
 
 .language-selector div {
@@ -24,10 +30,8 @@
 }
 
 .button-container {
-    height: 50px;
-    width: 1000px;
-    margin: auto;
-    margin-top: 10px;
+    height: 40px;
+    width: 700px;
     padding: 5px;
     display: flex;
     -webkit-user-select: none; /* Safari */        
@@ -72,7 +76,7 @@
 }
 
 .col-1of9-contents-1of3:nth-child(1) {
-    line-height: 50px;
+    line-height: 40px;
 }
 
 .city-headline {
@@ -106,7 +110,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
-    margin-right: 40px;
+    margin-left: 100px;
 }
 
 .city-item-menu-option {
@@ -130,7 +134,7 @@
 }
 
 .city-items-container {
-    width: 700px;
+    width: 600px;
     margin: auto;
 }
  
